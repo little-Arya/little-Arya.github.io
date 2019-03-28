@@ -399,61 +399,37 @@ summary 定义 details 元素的标题
 </ul>
 <ul>
 <li><p>CSS基础语法（这是我自己学的时候记的笔记，所以直接拷贝上来了）</p>
-<p> a CSS规则由两个主要的部分构成：选择器，以及一条或多条声明。<br>   selector {declaration1; declaration2; … declarationN }</p>
-<p>  选择器通常是您需要改变样式的 HTML 元素，每条声明由一个属性和一个值组成。</p>
-<p>  属性（property）是您希望设置的样式属性（style attribute）。每个属性有一个值。<br>  属性和值被冒号分开selector {property: value}；格式： 选择器{属性：值；属性：值}。<br>  （如果值为若干单词，则要给值加引号）</p>
-</li>
-</ul>
-<pre><code> b 根据CSS,子元素从父元素继承属性。但是它并不总是按此方式工作。看看下面这条规则：
-  body {
-      font-family: Verdana, sans-serif;
-       }
-  根据上面这条规则，站点的 body 元素将使用 Verdana 字体（假如访问者的系统中存在该字体的话）。
-
-
- c 在 CSS 中，类选择器以一个点号显示：
-   .center {text-align: center}  //文字排列（text-alignment）和字体尺寸（font-size）
-
-
- d  CSS 背景属性
-
-   属性                        描述 
+<p>1.CSS规则由两个主要的部分构成：选择器，以及一条或多条声明。</p>
+<pre><code>selector {declaration1; declaration2; ... declarationN }
+</code></pre><p>   选择器通常是您需要改变样式的 HTML 元素，每条声明由一个属性和一个值组成。<br>   属性（property）是您希望设置的样式属性（style attribute）。每个属性有一个值。<br>   属性和值被冒号分开selector {property: value}；格式： 选择器{属性：值；属性：值}。<br>   （如果值为若干单词，则要给值加引号）</p>
+<p>2.根据 CSS，子元素从父元素继承属性。但是它并不总是按此方式工作。看看下面这条规则：</p>
+<p>   body{</p>
+<pre><code>font-family: Verdana, sans-serif;
+ }
+</code></pre><p>   根据上面这条规则，站点的 body 元素将使用 Verdana 字体（假如访问者的系统中存在该字体的话）。</p>
+<p>3.在 CSS 中，类选择器以一个点号显示：</p>
+<pre><code>.center {text-align: center}  //文字排列（text-alignment）和字体尺寸（font-size）
+</code></pre><p>4.CSS 背景属性</p>
+<pre><code>     属性                        描述 
 background                 简写属性，作用是将背景属性设置在一个声明中。
 background-attachment      背景图像是否固定或者随着页面的其余部分滚动。
 background-color           设置元素的背景颜色。
 background-image           把图像设置为背景。
 background-position        设置背景图像的起始位置。
 background-repeat          设置背景图像是否及如何重复。
-
-
- e 字符转换
-
-  text-transform 属性处理文本的大小写。这个属性有4个值：none uppercase lowercase capitalize，默认值 none 对文本不做任何改动，将使用源文档中的原有大小写。顾名思义，uppercase 和 lowercase 将文本转换为全大写和全小写字符。最后，capitalize 只对每个单词的首字母大写。
-
-
- f CSS 文本属性
-   属性               描述
-  color             设置文本颜色
-  direction         设置文本方向。
-  line-height       设置行高。
-  letter-spacing    设置字符间距。
-  text-align        对齐元素中的文本。
-  text-decoration   向文本添加修饰。
-  text-indent       缩进元素中文本的首行。
-  text-shadow       设置文本阴影。CSS2 包含该属性，但是 CSS2.1 没有保留该属性。
-  text-transform    控制元素中的字母。
-  unicode-bidi      设置文本方向。
-  white-space       设置元素中空白的处理方式。
-  word-spacing      设置字间距。
-  :first-letter     向文本的第一个字母添加特殊样式。  
-  :first-line       向文本的首行添加特殊样式。           
-  :before           在元素之前添加内容。            
-  :after            在元素之后添加内容。  
-
-
- g CSS 伪元素用于向某些选择器设置特殊效果。伪元素的语法：
-              selector:pseudo-element {property:value;}
-</code></pre><hr>
+</code></pre><p>5.字符转换</p>
+<pre><code>text-transform 属性处理文本的大小写。这个属性有4个值：none uppercase lowercase capitalize，
+默认值 none 对文本不做任何改动，将使用源文档中的原有大小写。顾名思义，
+uppercase 和 lowercase 将文本转换为全大写和全小写字符。
+最后，capitalize 只对每个单词的首字母大写。
+</code></pre><p>6.CSS 文本属性</p>
+<pre><code>属性               描述
+</code></pre><p>   color             设置文本颜色<br>   direction         设置文本方向。<br>   line-height       设置行高。<br>   letter-spacing    设置字符间距。<br>   text-align        对齐元素中的文本。<br>   text-decoration   向文本添加修饰。<br>   text-indent       缩进元素中文本的首行。<br>   text-shadow       设置文本阴影。CSS2 包含该属性，但是 CSS2.1 没有保留该属性。<br>   text-transform    控制元素中的字母。<br>   unicode-bidi      设置文本方向。<br>   white-space       设置元素中空白的处理方式。<br>   word-spacing      设置字间距。<br>   :first-letter     向文本的第一个字母添加特殊样式。<br>   :first-line       向文本的首行添加特殊样式。<br>   :before           在元素之前添加内容。<br>   :after            在元素之后添加内容。  </p>
+<p>7.CSS 伪元素用于向某些选择器设置特殊效果。伪元素的语法：</p>
+<pre><code>selector:pseudo-element {property:value;}
+</code></pre></li>
+</ul>
+<hr>
 <p> <a href="https://www.imooc.com/code/49" target="_blank" rel="noopener">HTML学习资料导航</a></p>
 
           
