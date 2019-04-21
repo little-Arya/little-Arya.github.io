@@ -79,14 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="http://Arya.com/categories/index.html">
+<meta name="description" content="#《三篇论文读后感》 第一篇-《Google File System》   首先，Google GFS 文件系统是一个面向大规模数据密集型应用的、可伸缩的分布式文件系统 。而Google GFS文件系统是基于现实的考量所设计出来的，它的设计需求是改变以往的对文件只能按顺序只读的操作，且由于经常文件巨大影响工作效率，文件系统又对应用程序有较大要求等。所以，Google已经针对不同的应用部署了多套">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Review">
+<meta property="og:url" content="http://Arya.com/2019/04/15/Review/index.html">
 <meta property="og:site_name" content="Arya">
+<meta property="og:description" content="#《三篇论文读后感》 第一篇-《Google File System》   首先，Google GFS 文件系统是一个面向大规模数据密集型应用的、可伸缩的分布式文件系统 。而Google GFS文件系统是基于现实的考量所设计出来的，它的设计需求是改变以往的对文件只能按顺序只读的操作，且由于经常文件巨大影响工作效率，文件系统又对应用程序有较大要求等。所以，Google已经针对不同的应用部署了多套">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-24T07:57:02.426Z">
+<meta property="og:updated_time" content="2019-04-18T14:21:23.940Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分类">
+<meta name="twitter:title" content="Review">
+<meta name="twitter:description" content="#《三篇论文读后感》 第一篇-《Google File System》   首先，Google GFS 文件系统是一个面向大规模数据密集型应用的、可伸缩的分布式文件系统 。而Google GFS文件系统是基于现实的考量所设计出来的，它的设计需求是改变以往的对文件只能按顺序只读的操作，且由于经常文件巨大影响工作效率，文件系统又对应用程序有较大要求等。所以，Google已经针对不同的应用部署了多套">
 
 
 
@@ -116,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://Arya.com/categories/">
+  <link rel="canonical" href="http://Arya.com/2019/04/15/Review/">
 
 
 
 
 
-  <title>分类 | Arya</title>
+  <title>Review | Arya</title>
   
 
 
@@ -238,40 +241,174 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/04/15/Review/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiao zhongying">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images\01.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Arya">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">分类</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                目前共计 1 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">1</span></li></ul>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">Review</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-15T20:29:35+08:00">
+                2019-04-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p> #《三篇论文读后感》</p>
+<h2 id="第一篇-《Google-File-System》"><a href="#第一篇-《Google-File-System》" class="headerlink" title="第一篇-《Google File System》"></a>第一篇-《Google File System》</h2><p>   首先，Google GFS 文件系统是一个面向大规模数据密集型应用的、可伸缩的分布式文件系统 。而Google GFS文件系统是基于现实的考量所设计出来的，它的设计需求是改变以往的对文件只能按顺序只读的操作，且由于经常文件巨大影响工作效率，文件系统又对应用程序有较大要求等。所以，Google已经针对不同的应用部署了多套 GFS 集群。最大的一个集群拥有超过 1000 个存储节点，超过300TB 的硬盘空间，被不同机器上的数百个客户端连续不断的频繁访 问。系统的工作负载主要由两种读操作组成：大规模的流式读取和小规模的随机读取，这样可以尽量减少组件失效的情况。但是，系统的工作负载还包括许多大规模的、顺序的、数据追加方式的写操作。一般情况下，每次写入的数据的大小和大规模读类似。数据一旦被写入后，文件就很少会被修改了。系统支持小规模的 随机位置写入操作，但是可能效率不彰。此外，GFS 提供了一套类似传统文件系统的API接口函数，虽然并不是严格按照POSIX等标准API的形式实现的。 文件以以及GFS 提供了快照和记录追加操作。快照以很低的成本创建一个文件或者目录树的拷贝。记录追加操作允许多个客户端同时同时对一个文件进行数据追加操作，同时保证每个客户端的追加操作都是原子性的。一个GFS集群包含一个单独的Master节点3、多台Chunk服务器，并且同时被多个客户端访问，所以此文件系统选择单一的Master节点，以及设计Chunk的尺寸为64M。Master 服务器7存储 3 种主要类型的元数据，包括：文件和Chunk的命名空间、文件和Chunk的对应关系、每 个 Chunk 副本的存放地点。因为元数据保存在内存中，所以 Master 服务器的操作速度非常快。</p>
+<h2 id="第二篇-《Google-Bigtable》"><a href="#第二篇-《Google-Bigtable》" class="headerlink" title="第二篇-《Google Bigtable》"></a>第二篇-《Google Bigtable》</h2><p>   Bigtable 是一个分布式的结构化数据存储系统，它被设计用来处理海量数据：通常是分布在数千台普通服务器上的 PB 级的数据。Bigtable 的设计目的是可靠的处理 PB 级别的数据，并且能够部署到上千台机器上。Bigtable已经实现了下面的几个目标：适用性广泛、可扩展、高性能和高可用性。在很多方面，Bigtable 和数据库很类似。Bigtable 包括了三个主要的组件：链接到客户程序中的库、一个 Master 服务器和多个 Tablet 服务器。针对系统工作负载的变化情况，BigTable 可以动态的向集群中添加（或者删除）Tablet 服务器。Master 服务器主要负责以下工作：为 Tablet 服务器分配 Tablets、检测新加入的或者过期失效的 Table 服务器、对 Tablet 服务器进行负载均衡、以及对保存在 GFS 上的文件进行垃圾收集。除此之外，它还处理对模式的相关修改操作，例如建立表和列族。截止到2006年8月，Google内部一共有388个非测试用的Bigtable集群运行在各种各样的服务器集群上，合计大约有 24500 个 Tablet 服务器。</p>
+<h2 id="第三篇-《Google-MapReduce》"><a href="#第三篇-《Google-MapReduce》" class="headerlink" title="第三篇-《Google MapReduce》"></a>第三篇-《Google MapReduce》</h2><p>   MapReduce 是一个编程模型，也是一个处理和生成超大数据集的算法模型的相关实现。用户首先创建一一个 Reduce 函数用来合并所有的具有相同中间 key 值的中间 value 值。MapReduce 架构的程序能够在大量的普通配置的计算机上实现并行化处理。这个系统在运行时只关心：如何分割输入数据，在大量计算机组成的集群上的调度，集群中计算机的错误处理，管理集群中计算机之间必要的通信。采用 MapReduce 架构可以使那些没有并行计算和分布式处理系统开发经验的程序员有效利用分布式系统的丰富资源。MapReduce 编程模型的原理是：利用一个输入 key/value pair 集合来产生一个输出的 key/value pair 集合。MapReduce 模型可以有多种不同的实现方式。如何正确选择取决于具体的环境。例如，一种实现方式适用于小型的共享内存方式的机器，另外一种实现方式则适用于大型 NUMA 架构的多处理器的主机，而有的实现方式更适合大型的网络连接集群。Master 持有一些数据结构，它存储每一个 Map 和 Reduce 任务的状态（空闲、工作中或完成)，以及 Worker机器(非空闲任务的机器)的标识。因为 MapReduce 库的设计初衷是使用由成百上千的机器组成的集群来处理超大规模的数据，所以，这个库必须要能很好的处理机器故障。到目前为止，MapReduce 最成功的应用就是重写了 Google 网络搜索服务所使用到的 index 系统。统。索引系统的输入数据是网络爬虫抓取回来的海量的文档，这些文档数据都保存在 GFS 文件系统里。</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>你可以对我进行打赏哦</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/weichat.jpg" alt="xiao zhongying 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="xiao zhongying 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/13/Arya02/" rel="next" title="Arya02">
+                <i class="fa fa-chevron-left"></i> Arya02
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/18/Rewivew01/" rel="prev" title="Rewivew01">
+                Rewivew01 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -304,8 +441,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -397,6 +543,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一篇-《Google-File-System》"><span class="nav-number">1.</span> <span class="nav-text">第一篇-《Google File System》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二篇-《Google-Bigtable》"><span class="nav-number">2.</span> <span class="nav-text">第二篇-《Google Bigtable》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三篇-《Google-MapReduce》"><span class="nav-number">3.</span> <span class="nav-text">第三篇-《Google MapReduce》</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
