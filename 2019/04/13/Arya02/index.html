@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Arya">
 <meta property="og:description" content="Arya02第二篇文章哦对数据库语言的了解 MySQL和SQL区别　一开始以为MySQL和SQL是同一个东西，其实不然。通过百度，我了解到：　　　　　对于程序开发人员而言，目前使用最流行的两种后台数据库即为MySQL and SQLServer。这两者最基本的相似之处在于数据存储和属于查询系统。你可以使用SQL来访问这两种数据库的数据，因为它们都支持ANSI-SQL。还有，这两种数据库系统都支持二">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-18T10:36:33.130Z">
+<meta property="og:updated_time" content="2019-04-21T01:29:15.865Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Arya02">
 <meta name="twitter:description" content="Arya02第二篇文章哦对数据库语言的了解 MySQL和SQL区别　一开始以为MySQL和SQL是同一个东西，其实不然。通过百度，我了解到：　　　　　对于程序开发人员而言，目前使用最流行的两种后台数据库即为MySQL and SQLServer。这两者最基本的相似之处在于数据存储和属于查询系统。你可以使用SQL来访问这两种数据库的数据，因为它们都支持ANSI-SQL。还有，这两种数据库系统都支持二">
@@ -329,7 +329,52 @@
 <p>　　　两者优缺点分析：<br>  　1　优点分析：MYSQL短小精悍，容易上手，操作简单，免费供用的。相对其它数据库有特色又实用的语法多一些。SQL怎么也算是大型数据库，稳定，能做一般大系统的数据仓库，运行速度明显比MYSQL快N多（海量数据下这个优势显而易见）。</p>
 <pre><code>2　缺点分析：MYSQL难担当大系统的数据仓库，运行速度慢，不够稳定，有掉线的情况。SQLSERVER价格贵（当然没说5元盗版），使用起来比MYSQL要难一些，毕竟东西大了说道多点。
 </code></pre><ul>
-<li>SQL语句的常用语法（因为不懂，误打误撞学了这个发现还挺好，但还是要学常用的MYSQL）<br>　　１　什么是 SQL？<br>　　　SQL 指结构化查询语言<br>　　　SQL 使我们有能力访问数据库<br>　　　SQL 是一种 ANSI 的标准计算机语言</li>
+<li><p>SQL语句的常用语法（因为不懂，误打误撞学了这个发现还挺好，但还是要学常用的MYSQL）<br>　  １　什么是 SQL？<br>　　　SQL 指结构化查询语言<br>　　　SQL 使我们有能力访问数据库<br>　　　SQL 是一种 ANSI 的标准计算机语言</p>
+<p> 2   SQL (结构化查询语言)是用于执行查询的语法。但是 SQL 语言也包含用于更新、插入和删除记录的语法。</p>
+<pre><code>  查询和更新指令构成了 SQL 的 DML 部分：
+  SELECT - 从数据库表中获取数据
+  UPDATE - 更新数据库表中的数据
+  DELETE - 从数据库表中删除数据
+  INSERT INTO - 向数据库表中插入数据
+SQL 的数据定义语言 (DDL) 部分使我们有能力创建或删除表格。我们也可以定义索引（键），规定表之间的链接，以及施加表间的约束。
+ SQL 中最重要的 DDL 语句:
+  CREATE DATABASE - 创建新数据库
+  ALTER DATABASE - 修改数据库
+  CREATE TABLE - 创建新表
+  ALTER TABLE - 变更（改变）数据库表
+  DROP TABLE - 删除表
+  CREATE INDEX - 创建索引（搜索键）
+  DROP INDEX - 删除索引
+</code></pre><p> 3  a  SQL SELECT 语法：SELECT 列名称 FROM 表名称</p>
+<pre><code>  以及：
+ SELECT * FROM 表名称 //表示选取表的所有列
+ //注释：SQL 语句对大小写不敏感。SELECT 等效于 select。
+
+b  在表中，可能会包含重复值。这并不成问题，不过，有时您也许希望仅仅列出不同（distinct）的值。
+ 关键词 DISTINCT 用于返回唯一不同的值。
+ 语法：SELECT DISTINCT 列名称 FROM 表名称  //把你想要的某一列专门挑出来
+
+c  如需有条件地从表中选取数据，可将 WHERE 子句添加到 SELECT 语句。
+ 语法
+   SELECT 列名称 FROM 表名称 WHERE 列 运算符 值
+
+d  AND 和 OR 可在 WHERE 子语句中把两个或多个条件结合起来。
+ 如果第一个条件和第二个条件都成立，则 AND 运算符显示一条记录。
+ 如果第一个条件和第二个条件中只要有一个成立，则 OR 运算符显示一条记录。
+
+e   INSERT INTO 语句用于向表格中插入新的行。
+ 语法:INSERT INTO 表名称 VALUES (值1, 值2,....)
+   我们也可以指定所要插入数据的列：
+    INSERT INTO table_name (列1, 列2,...) VALUES (值1, 值2,....)
+
+f  Update 语句用于修改表中的数据。
+</code></pre><p>  语法：</p>
+<pre><code>    UPDATE 表名称 SET 列名称 = 新值 WHERE 列名称 = 某值
+
+g   DELETE 语句用于删除表中的行。
+</code></pre><p>  语法:</p>
+<pre><code>DELETE FROM 表名称 WHERE 列名称 = 值
+</code></pre></li>
 </ul>
 
       
