@@ -250,7 +250,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/05/19/Arys06/">
+    <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/05/20/Arya07/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xiao zhongying">
@@ -269,7 +269,137 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/05/19/Arys06/" itemprop="url">Arys06（做完贴吧的心得）</a></h1>
+                <a class="post-title-link" href="/2019/05/20/Arya07/" itemprop="url">Arya07（Java日期时间的问题）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-20T11:09:06+08:00">
+                2019-05-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="java-util-包提供了-Date-类来封装当前的日期和时间。-Date-类提供两个构造函数来实例化-Date-对象。"><a href="#java-util-包提供了-Date-类来封装当前的日期和时间。-Date-类提供两个构造函数来实例化-Date-对象。" class="headerlink" title="java.util 包提供了 Date 类来封装当前的日期和时间。 Date 类提供两个构造函数来实例化 Date 对象。"></a>java.util 包提供了 Date 类来封装当前的日期和时间。 Date 类提供两个构造函数来实例化 Date 对象。</h1><pre><code>第一个构造函数使用当前日期和时间来初始化对象：Date( )
+第二个构造函数接收一个参数，该参数是从1970年1月1日起的毫秒数：Date(long millisec)。
+之前将时间存进数据库的时候，第一个表的时间是现在时间开始算的，第二个表就是1970年开始的，代码如下：
+第一个表的：  Date curTime = new Date();
+             SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy-MM-dd hh:mm:ss&quot;);
+             String regtime = sdf.format(curTime);
+
+第二个表的：Date time=new Date(1);
+           SimpleDateFormat sdf=new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;);//设置成mysql能识别的datetime形式
+           String time1=sdf.format(time);
+</code></pre><p>   这两个时间的区别就是第二个Date：<br>     public Date(long date)<br>     Constructs a Date object using the given millisecondstime value. If the given milliseconds value contains timeinformation, the driver will set the time components to thetime in the default time zone (the time zone of the Java virtualmachine running the application) that corresponds to zero GMT.<br>      Parameters:date - milliseconds since January 1, 1970, 00:00:00 GMT notto exceed the milliseconds representation for the year 8099.A negative number indicates the number of millisecondsbefore January 1, 1970, 00:00:00 GMT.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/05/19/Arya06/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiao zhongying">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images\01.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Arya">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/05/19/Arya06/" itemprop="url">Arya06（做完贴吧的心得）</a></h1>
         
 
         <div class="post-meta">
@@ -593,8 +723,9 @@
             out.print(&quot; &quot;);  
     out.print(&quot;&lt;br/&gt;&quot;);
             while (rs.next()) {%>
+    
      <div class="all">            
-     <div><br> <h2><%=rs.getstring("title") %> </%=rs.getstring("title")></h2>
+      <div><br> <h2><%=rs.getstring("title") %> </%=rs.getstring("title")></h2>
          <p></p><h4><%=rs.getstring("message") %></%=rs.getstring("message")></h4><p></p>
       <li><%=rs.getstring("username") %>&nbsp;&nbsp;&nbsp;<a href="Message.jsp?id=<%=rs.getString(" id")%>">评论</a>&nbsp;</%=rs.getstring("username")></li>
       <br>
@@ -1587,7 +1718,7 @@ uppercase 和 lowercase 将文本转换为全大写和全小写字符。
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

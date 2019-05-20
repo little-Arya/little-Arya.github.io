@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Arya">
 <meta property="og:description" content="今天学会的一点内容（5.06）   今天知道了jsp页面内的输入框里面的内容怎么传到另一个jsp页面。（之前被误导以为要把内容保存至session中然后上传到指定页面，果然还是想太多）   这是我的要传页面的代码（最后证明还是被误导了，这只能通过数据库操作） 123456&amp;lt;form  method=&amp;quot;post&amp;quot; action=&amp;quot;success.jsp&amp;quot;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-19T14:05:48.530Z">
+<meta property="og:updated_time" content="2019-05-20T03:24:18.209Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Arya04">
 <meta name="twitter:description" content="今天学会的一点内容（5.06）   今天知道了jsp页面内的输入框里面的内容怎么传到另一个jsp页面。（之前被误导以为要把内容保存至session中然后上传到指定页面，果然还是想太多）   这是我的要传页面的代码（最后证明还是被误导了，这只能通过数据库操作） 123456&amp;lt;form  method=&amp;quot;post&amp;quot; action=&amp;quot;success.jsp&amp;quot;">
@@ -349,8 +349,9 @@
             out.print(&quot; &quot;);  
     out.print(&quot;&lt;br/&gt;&quot;);
             while (rs.next()) {%>
+    
      <div class="all">            
-     <div><br> <h2><%=rs.getstring("title") %> </%=rs.getstring("title")></h2>
+      <div><br> <h2><%=rs.getstring("title") %> </%=rs.getstring("title")></h2>
          <p></p><h4><%=rs.getstring("message") %></%=rs.getstring("message")></h4><p></p>
       <li><%=rs.getstring("username") %>&nbsp;&nbsp;&nbsp;<a href="Message.jsp?id=<%=rs.getString(" id")%>">评论</a>&nbsp;</%=rs.getstring("username")></li>
       <br>
@@ -501,7 +502,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
