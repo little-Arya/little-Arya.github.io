@@ -250,6 +250,160 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/07/31/Arya10/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiao zhongying">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images\01.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Arya">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/31/Arya10/" itemprop="url">Arya10(学习Vue.js框架)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-31T09:47:14+08:00">
+                2019-07-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Vue-js含义"><a href="#Vue-js含义" class="headerlink" title="Vue.js含义"></a>Vue.js含义</h1><p>  Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架。与其它大型框架不同的是，Vue     被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与现代化的工具链以及各种支持类库结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。学此框架的原因是正学习微信小程序的开发，学习到一半了解到这语法和vue语法很像，学过vue学小程序会更容易。</p>
+<h2 id="Vue-js语法"><a href="#Vue-js语法" class="headerlink" title="Vue.js语法"></a>Vue.js语法</h2><p>  1.挂载点、模板及实例<br>  <img src="/image/03.PNG" alt="Alt text"><br>  挂载点：el属性(#root)对应后面id(id=”root”)所对应的节点,div标签就是Vue实例的挂载点（因为实例中的el与div中的id对应）；<br>  模版： 指的是挂载点内部，也可以写在实例里面template属性里面;<br>  实例：Vue会结合模版和数据生成最终要展示的内容，然后把放在挂载点之中。<br>  ps: 实例中el:”#root”表示Vue接管的是 上面<div>里面的东西，data表述Vue里面的数据，methods是方法。vue可以通过script标签引入,<br>  随意任何标签（注意：渲染出data中的数据）。</div></p>
+<p>  2.数据、事件和方法<br>   如上述代码，v-on是一个事件，handleclick是一个函数方法且在实例中定义，表示一点击content的内容就把content变成world。<br>   v-html = “数据名” 输出&lt;标签&gt; 和 文本v-text  = “数据名” 输出纯文本 ,<br>   标签也会转义为文本。v-html与v-text的区别是，v-html不会转义，而v-text会转译；<br>  v-on:click=”handleClick”：通过v-on给元素绑定一个Click事件，事件触发方法。v-on:click的简写方法：@click。 @click=”方法名”<br>  在当前标签中绑定一个点击事件,方法在methods中声明new Vue中的this是指这个 Vue实例 ,指它自己’’this.data.属性名’’ 指 “Vue<br>   里的 data 里的 属性”。</p>
+<p>  3.Vue中的属性绑定和双向数据绑定<br>   v-bind：属性绑定。缩写为冒号  : (:title)<br>   v-model：双向数据绑定，随着数据的修改与之对应的也会修改。<br>   <img src="/image/04.PNG" alt="Alt text"></p>
+<p>  4.Vue中的计算属性和侦听器<br>   1.计算属性(computed:)：一个属性通过其他属性计算而来<br>   好处：（只有它依赖的数据发生变化的时候，它才会重新计算；如果依赖的属性没有发生变化，它会利用以前计算结果的缓存来在页面上做显示）</p>
+<p>   2.侦听器(watch)：指的是监听某一个数字发生了变化，然后就在监听器里面做业务逻辑，侦听器watch：监测某一个数据或计算属性发生了变化，一旦这个数据发生了变化，就在该侦听器内写入业务逻辑。注：watch不仅可以监听vue实例的data内属性，而且可以监听计算computed下计算属性的变化<br>  <img src="/image/05.PNG" alt="Alt text"></p>
+<p>  5.v-if,v-show,v-for指令<br>   v-if：当对应data中的值show是true时显示，为false，则把这个标签就移除。<br>   v-if 和 v-show 用处：<br>     1.v-show 不会像 v-if 每次销毁再重新创建，v-show 性能相对v-if 高一些；<br>     2.如果标签显示的频率不是那么大，只需要做一次显示或者隐藏，这时候用 v-if 是一个更好的选择。<br>   所以：<br>   v-if:具有选择性的指令，可以是页面显示隐藏。<br>   v-show:加的隐藏<br>   v-for：循环遍历，注意添加key的属性它的值的内容必须是完全不同的<br>   <img src="/image/06.PNG" alt="Alt text"></p>
+<h3 id="Vue-js的组件"><a href="#Vue-js的组件" class="headerlink" title="Vue.js的组件"></a>Vue.js的组件</h3><p>  1.todoList功能开发<br>    <img src="/image/07.PNG" alt="Alt text"><br>  Vue是在操作数据、点击提交，将input的内容放进数组中，如果数组有内容，列标签会自动循环，将数据输出。JQ是操作DOM, 而Vue是操作数据。一句话来说: key值是为了虚拟dom的比对。展开来说: 页面上的标签都对应具体的虚拟dom对象(虚拟dom就是js对象), 循环中 ,如果没有唯一key , 页面上删除一条标签, 由于并不知道删除的是那一条! 所以要吧全部虚拟dom重新渲染, 如果知道key为x标签被删除掉, 只需要把渲染的dom为x的标签去掉即可! </p>
+<p>  2.todoList组件拆分<br>   <img src="/image/08.PNG" alt="Alt text"></p>
+<p>  3.组件和实例的关系<br>  每一个vue组件都是一个vue实例。实例的模板里使用一个小的组件。每一个组件也可以写methods，data。因此每一个组件都是一个Vue的实例。如果不定义模板，就会根据挂载点下面的DOM标签标签全部内容当做模板。</p>
+<p>  4.实现todoList的删除功能<br>  父组件向子组件传值，通过属性的方式传递，子组件中通过props接收。在子组件中通过$emit触发父组件的自定义事件（this.$emit(‘delete’,this.index)），子组件中通过监听事件的触发（@delete=”handleDelete”）进行相应的业务逻辑处理。<br>  在子组件的方法中，发布一个事件this.$emit( ‘ 事件名 ‘ , this.属性)        this.属性：需要传递的参数<br>  在子组件标签中绑定一个事件,触发父组件里的方法    &lt;子组件标签  @事件名=”方法名” &gt; &lt;子组件标签 /&gt;</p>
+<h4 id="Vue-cli的简介与使用"><a href="#Vue-cli的简介与使用" class="headerlink" title="Vue-cli的简介与使用"></a>Vue-cli的简介与使用</h4><p>  一、首先是安装配置<br>   <img src="/image/10.PNG" alt="Alt text"><br>   注意：my-project是你自己的项目名称<br>   【用脚手架工具创建项目】<br>  1、npm install -global vue-cli          全局安装vue脚手架工具  vue-cli<br>  2、vue init  webpack   my_project   创建一个基于webpack模版的新项目<br>  3、cd my-project   进入到项目目录<br>  4、npm run dev   运行项目<br>  5、项目运行成功点击进入<a href="http://localhost:8080没出错即成功" target="_blank" rel="noopener">http://localhost:8080没出错即成功</a></p>
+<p>  二、其次解读项目中各个文件<br>  <img src="/image/09.PNG" alt="Alt text"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/06/19/Arya09/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -580,6 +734,126 @@
            String time1=sdf.format(time);
 </code></pre><p>   这两个时间的区别就是第二个Date：<br>     public Date(long date)<br>     Constructs a Date object using the given millisecondstime value. If the given milliseconds value contains timeinformation, the driver will set the time components to thetime in the default time zone (the time zone of the Java virtualmachine running the application) that corresponds to zero GMT.<br>      Parameters:date - milliseconds since January 1, 1970, 00:00:00 GMT notto exceed the milliseconds representation for the year 8099.A negative number indicates the number of millisecondsbefore January 1, 1970, 00:00:00 GMT.</p>
 
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/05/19/Arya06/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiao zhongying">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images\01.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Arya">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/05/19/Arya06/" itemprop="url">Arya06（做完贴吧的心得）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-19T22:06:26+08:00">
+                2019-05-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="虽然贴吧做的不完善，但是现在可以发表话题，可以评论，当然登陆注册，以及访问某些页面的权限都设置了。"><a href="#虽然贴吧做的不完善，但是现在可以发表话题，可以评论，当然登陆注册，以及访问某些页面的权限都设置了。" class="headerlink" title="虽然贴吧做的不完善，但是现在可以发表话题，可以评论，当然登陆注册，以及访问某些页面的权限都设置了。"></a>虽然贴吧做的不完善，但是现在可以发表话题，可以评论，当然登陆注册，以及访问某些页面的权限都设置了。</h1><h1 id="贴吧还没完善的地方：没有注销功能；以及注册权限：相同的用户名可以重复注册；查找功能。"><a href="#贴吧还没完善的地方：没有注销功能；以及注册权限：相同的用户名可以重复注册；查找功能。" class="headerlink" title="贴吧还没完善的地方：没有注销功能；以及注册权限：相同的用户名可以重复注册；查找功能。"></a>贴吧还没完善的地方：没有注销功能；以及注册权限：相同的用户名可以重复注册；查找功能。</h1><h1 id="做这个项目的心得："><a href="#做这个项目的心得：" class="headerlink" title="做这个项目的心得："></a>做这个项目的心得：</h1><p>   这可以说是我独立完成的第一个项目。一开始懵懵懂懂，把登陆注册连接好数据库都花了几天时间，真是万事开头难，不过解决好的那一刻也是很开心的。后面的问题就是如何发帖，当时各种百度心里没谱，多种尝试理解之后就终于找到了门路，主要还是要存进数据库，然后从数据库读取出来到页面上，评论功能也是如此。这次最大的体验就是学以致用。学习到的东西其实不多，但是能用起来真的是才体现了它的作用。压力下才能进步吧，当一个功能做不出来的时候真是睡觉的时候还在想，时间一天天过去问题还没解决真的压力山大，会给自己压迫感。做这个项目我把具体的每个步骤都列出来了，就是做事有先后顺序，一个一个完成， 其实完善的路也是很长的，只是尽自己所能，对别人给的意见要珍惜。第一次做这个东西做出来了真的很开心，最后还设计页面，在网上找到了自己想要的类型，用CSS给做出来，很可惜的是除了页面的一些验证功能用了JS,就没怎么用了。</p>
+<h1 id="后面要继续努力花时间，完善了贴吧后把书城做好，学以致用才不会落后！"><a href="#后面要继续努力花时间，完善了贴吧后把书城做好，学以致用才不会落后！" class="headerlink" title="后面要继续努力花时间，完善了贴吧后把书城做好，学以致用才不会落后！"></a>后面要继续努力花时间，完善了贴吧后把书城做好，学以致用才不会落后！</h1>
           
         
       
@@ -1262,304 +1536,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/04/15/Review/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xiao zhongying">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images\01.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Arya">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/15/Review/" itemprop="url">Review</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-15T20:29:35+08:00">
-                2019-04-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p> #《三篇论文读后感》</p>
-<h2 id="第一篇-《Google-File-System》"><a href="#第一篇-《Google-File-System》" class="headerlink" title="第一篇-《Google File System》"></a>第一篇-《Google File System》</h2><p>   首先，Google GFS 文件系统是一个面向大规模数据密集型应用的、可伸缩的分布式文件系统 。而Google GFS文件系统是基于现实的考量所设计出来的，它的设计需求是改变以往的对文件只能按顺序只读的操作，且由于经常文件巨大影响工作效率，文件系统又对应用程序有较大要求等。所以，Google已经针对不同的应用部署了多套 GFS 集群。最大的一个集群拥有超过 1000 个存储节点，超过300TB 的硬盘空间，被不同机器上的数百个客户端连续不断的频繁访 问。系统的工作负载主要由两种读操作组成：大规模的流式读取和小规模的随机读取，这样可以尽量减少组件失效的情况。但是，系统的工作负载还包括许多大规模的、顺序的、数据追加方式的写操作。一般情况下，每次写入的数据的大小和大规模读类似。数据一旦被写入后，文件就很少会被修改了。系统支持小规模的 随机位置写入操作，但是可能效率不彰。此外，GFS 提供了一套类似传统文件系统的API接口函数，虽然并不是严格按照POSIX等标准API的形式实现的。 文件以以及GFS 提供了快照和记录追加操作。快照以很低的成本创建一个文件或者目录树的拷贝。记录追加操作允许多个客户端同时同时对一个文件进行数据追加操作，同时保证每个客户端的追加操作都是原子性的。一个GFS集群包含一个单独的Master节点3、多台Chunk服务器，并且同时被多个客户端访问，所以此文件系统选择单一的Master节点，以及设计Chunk的尺寸为64M。Master 服务器7存储 3 种主要类型的元数据，包括：文件和Chunk的命名空间、文件和Chunk的对应关系、每 个 Chunk 副本的存放地点。因为元数据保存在内存中，所以 Master 服务器的操作速度非常快。</p>
-<h2 id="第二篇-《Google-Bigtable》"><a href="#第二篇-《Google-Bigtable》" class="headerlink" title="第二篇-《Google Bigtable》"></a>第二篇-《Google Bigtable》</h2><p>   Bigtable 是一个分布式的结构化数据存储系统，它被设计用来处理海量数据：通常是分布在数千台普通服务器上的 PB 级的数据。Bigtable 的设计目的是可靠的处理 PB 级别的数据，并且能够部署到上千台机器上。Bigtable已经实现了下面的几个目标：适用性广泛、可扩展、高性能和高可用性。在很多方面，Bigtable 和数据库很类似。Bigtable 包括了三个主要的组件：链接到客户程序中的库、一个 Master 服务器和多个 Tablet 服务器。针对系统工作负载的变化情况，BigTable 可以动态的向集群中添加（或者删除）Tablet 服务器。Master 服务器主要负责以下工作：为 Tablet 服务器分配 Tablets、检测新加入的或者过期失效的 Table 服务器、对 Tablet 服务器进行负载均衡、以及对保存在 GFS 上的文件进行垃圾收集。除此之外，它还处理对模式的相关修改操作，例如建立表和列族。截止到2006年8月，Google内部一共有388个非测试用的Bigtable集群运行在各种各样的服务器集群上，合计大约有 24500 个 Tablet 服务器。</p>
-<h2 id="第三篇-《Google-MapReduce》"><a href="#第三篇-《Google-MapReduce》" class="headerlink" title="第三篇-《Google MapReduce》"></a>第三篇-《Google MapReduce》</h2><p>   MapReduce 是一个编程模型，也是一个处理和生成超大数据集的算法模型的相关实现。用户首先创建一一个 Reduce 函数用来合并所有的具有相同中间 key 值的中间 value 值。MapReduce 架构的程序能够在大量的普通配置的计算机上实现并行化处理。这个系统在运行时只关心：如何分割输入数据，在大量计算机组成的集群上的调度，集群中计算机的错误处理，管理集群中计算机之间必要的通信。采用 MapReduce 架构可以使那些没有并行计算和分布式处理系统开发经验的程序员有效利用分布式系统的丰富资源。MapReduce 编程模型的原理是：利用一个输入 key/value pair 集合来产生一个输出的 key/value pair 集合。MapReduce 模型可以有多种不同的实现方式。如何正确选择取决于具体的环境。例如，一种实现方式适用于小型的共享内存方式的机器，另外一种实现方式则适用于大型 NUMA 架构的多处理器的主机，而有的实现方式更适合大型的网络连接集群。Master 持有一些数据结构，它存储每一个 Map 和 Reduce 任务的状态（空闲、工作中或完成)，以及 Worker机器(非空闲任务的机器)的标识。因为 MapReduce 库的设计初衷是使用由成百上千的机器组成的集群来处理超大规模的数据，所以，这个库必须要能很好的处理机器故障。到目前为止，MapReduce 最成功的应用就是重写了 Google 网络搜索服务所使用到的 index 系统。统。索引系统的输入数据是网络爬虫抓取回来的海量的文档，这些文档数据都保存在 GFS 文件系统里。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/04/13/Arya02/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xiao zhongying">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images\01.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Arya">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/13/Arya02/" itemprop="url">Arya02（数据库语言）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-13T20:34:45+08:00">
-                2019-04-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Arya02"><a href="#Arya02" class="headerlink" title="Arya02"></a>Arya02</h1><h2 id="第二篇文章哦"><a href="#第二篇文章哦" class="headerlink" title="第二篇文章哦"></a>第二篇文章哦</h2><h3 id="对数据库语言的了解"><a href="#对数据库语言的了解" class="headerlink" title="对数据库语言的了解"></a>对数据库语言的了解</h3><ul>
-<li><p>MySQL和SQL区别<br>　一开始以为MySQL和SQL是同一个东西，其实不然。通过百度，我了解到：<br>　　　　　对于程序开发人员而言，目前使用最流行的两种后台数据库即为MySQL and SQLServer。这两者最基本的相似之处在于数据存储和属于查询系统。你可以使用SQL来访问这两种数据库的数据，因为它们都支持ANSI-SQL。还有，这两种数据库系统都支持二进制关键词和关键索引，这就大大地加快了查询速度。同时，二者也都提供支持XML的各种格式。除了在显而易见的软件价格上的区别之外，这两个产品还有什么明显的区别吗？在这二者之间你是如何选择的？让我们看看这两个产品的主要的不同之处，包括发行费用，性能以及它们的安全性。</p>
-<p>根本的区别是它们遵循的基本原则</p>
-</li>
-</ul>
-<p>二者所遵循的基本原则是它们的主要区别：开放vs保守。SQL服务器的狭隘的，保守的存储引擎与MySQL服务器的可扩展，开放的存储引擎绝然不同。虽然你可以使用SQL服务器的Sybase引擎，但MySQL能够提供更多种的选择，如MyISAM,Heap, InnoDB, and BerkeleyDB。MySQL不完全支持陌生的关键词，所以它比SQL服务器要少一些相关的数据库。同时，MySQL也缺乏一些存储程序的功能，比如MyISAM引擎联支持交换功能。</p>
-<p>　　　两者优缺点分析：<br>  　1　优点分析：MYSQL短小精悍，容易上手，操作简单，免费供用的。相对其它数据库有特色又实用的语法多一些。SQL怎么也算是大型数据库，稳定，能做一般大系统的数据仓库，运行速度明显比MYSQL快N多（海量数据下这个优势显而易见）。</p>
-<pre><code>2　缺点分析：MYSQL难担当大系统的数据仓库，运行速度慢，不够稳定，有掉线的情况。SQLSERVER价格贵（当然没说5元盗版），使用起来比MYSQL要难一些，毕竟东西大了说道多点。
-</code></pre><ul>
-<li><p>SQL语句的常用语法（因为不懂，误打误撞学了这个发现还挺好，但还是要学常用的MYSQL）<br>　  １　什么是 SQL？<br>　　　SQL 指结构化查询语言<br>　　　SQL 使我们有能力访问数据库<br>　　　SQL 是一种 ANSI 的标准计算机语言</p>
-<p> 2   SQL (结构化查询语言)是用于执行查询的语法。但是 SQL 语言也包含用于更新、插入和删除记录的语法。</p>
-<pre><code>  查询和更新指令构成了 SQL 的 DML 部分：
-  SELECT - 从数据库表中获取数据
-  UPDATE - 更新数据库表中的数据
-  DELETE - 从数据库表中删除数据
-  INSERT INTO - 向数据库表中插入数据
-SQL 的数据定义语言 (DDL) 部分使我们有能力创建或删除表格。我们也可以定义索引（键），规定表之间的链接，以及施加表间的约束。
- SQL 中最重要的 DDL 语句:
-  CREATE DATABASE - 创建新数据库
-  ALTER DATABASE - 修改数据库
-  CREATE TABLE - 创建新表
-  ALTER TABLE - 变更（改变）数据库表
-  DROP TABLE - 删除表
-  CREATE INDEX - 创建索引（搜索键）
-  DROP INDEX - 删除索引
-</code></pre><p> 3 </p>
-<pre><code>a   SQL SELECT 语法：SELECT 列名称 FROM 表名称
-  以及：
- SELECT * FROM 表名称 //表示选取表的所有列
- //注释：SQL 语句对大小写不敏感。SELECT 等效于 select。
-
-b  在表中，可能会包含重复值。这并不成问题,不过,有时您也许希望仅仅列出不同（distinct）的值。
- 关键词 DISTINCT 用于返回唯一不同的值。
- 语法：SELECT DISTINCT 列名称 FROM 表名称  //把你想要的某一列专门挑出来
-
-c  如需有条件地从表中选取数据，可将 WHERE 子句添加到 SELECT 语句。
- 语法
-   SELECT 列名称 FROM 表名称 WHERE 列 运算符 值
-
-d  AND 和 OR 可在 WHERE 子语句中把两个或多个条件结合起来。
- 如果第一个条件和第二个条件都成立，则 AND 运算符显示一条记录。
- 如果第一个条件和第二个条件中只要有一个成立，则 OR 运算符显示一条记录。
-
-e   INSERT INTO 语句用于向表格中插入新的行。
- 语法:INSERT INTO 表名称 VALUES (值1, 值2,....)
-   我们也可以指定所要插入数据的列：
-    INSERT INTO table_name (列1, 列2,...) VALUES (值1, 值2,....)
-
-f  Update 语句用于修改表中的数据。
-</code></pre><p>  语法：</p>
-<pre><code>    UPDATE 表名称 SET 列名称 = 新值 WHERE 列名称 = 某值
-
-g   DELETE 语句用于删除表中的行。
-</code></pre><p>  语法:   DELETE FROM 表名称 WHERE 列名称 = 值</p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1612,7 +1588,7 @@ g   DELETE 语句用于删除表中的行。
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
