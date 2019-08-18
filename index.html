@@ -327,6 +327,10 @@
 <h3 id="重要的文件"><a href="#重要的文件" class="headerlink" title="重要的文件"></a>重要的文件</h3><p>   1.wxml view结构 ——-&gt;html<br>   2.wxss view样式 ——-&gt;css<br>   3.js   view行为 ——-&gt;js<br>   4.json文件：数据&amp;&amp;配置</p>
 <h3 id="注册小程序：App（）"><a href="#注册小程序：App（）" class="headerlink" title="注册小程序：App（）"></a>注册小程序：App（）</h3><h3 id="注册页面：Page（）"><a href="#注册页面：Page（）" class="headerlink" title="注册页面：Page（）"></a>注册页面：Page（）</h3><h3 id="数据绑定："><a href="#数据绑定：" class="headerlink" title="数据绑定："></a>数据绑定：</h3><p>   1.在data中初始化页面需要的数据，在页面中可以直接使用</p>
 <h3 id="事件（冒泡事件-非冒泡事件）"><a href="#事件（冒泡事件-非冒泡事件）" class="headerlink" title="事件（冒泡事件 || 非冒泡事件）"></a>事件（冒泡事件 || 非冒泡事件）</h3><p>   1.冒泡事件：bind+事件名<br>   2.非冒泡事件：catch+事件名</p>
+<h3 id="模板template"><a href="#模板template" class="headerlink" title="模板template"></a>模板template</h3><p>   1.定义：template 属性：name(标识模板)<br>   2.使用：template 属性：is(模板的name)<br>   3.引入模板结构：<import src="路径"><br>   4.引入模板样式：@import’路径’</import></p>
+<h3 id="列表渲染"><a href="#列表渲染" class="headerlink" title="列表渲染"></a>列表渲染</h3><p>   1.wx:for<br>   2.wx:key为每一个个体元素进行标记<br>   3.遍历的个体：item<br>   4.遍历的下标：index</p>
+<h3 id="本地缓存（setStorage-setStorageSync"><a href="#本地缓存（setStorage-setStorageSync" class="headerlink" title="本地缓存（setStorage,setStorageSync)"></a>本地缓存（setStorage,setStorageSync)</h3><p>   1.缓存的用户是否收藏当前文章：{0：true，1：false}<br>   2.注意：<br>   a.缓存之前应该先去获取之前本地缓存的数据<br>   b.缓存的新数据是在原有数据的基础上进行的<br>   c.当页面加载的时候onLoad中获取本地缓存的数据（动态修改当前页面是否收藏文章的状态）<br>   d.如果storage中没有缓存过通过key获取的Value为空<br>   e.如果用户之前没有缓存过的话：初始化一个空对象在storage中</p>
+<h3 id="音乐播放"><a href="#音乐播放" class="headerlink" title="音乐播放"></a>音乐播放</h3><p>   1.如何知道音乐在播放或者暂停<br>   2.将播放音乐的页面状态缓存到appData</p>
 
           
         
