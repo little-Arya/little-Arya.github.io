@@ -250,6 +250,134 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/05/06/Arya03/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiao zhongying">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images\01.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Arya">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/05/06/Arya03/" itemprop="url">Arya03（Tomcat运行失败的问题）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-06T15:23:38+08:00">
+                2019-05-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="这是eclipse中Tomcat崩溃时的解法"><a href="#这是eclipse中Tomcat崩溃时的解法" class="headerlink" title="这是eclipse中Tomcat崩溃时的解法"></a>这是eclipse中Tomcat崩溃时的解法</h1><h2 id="问题：项目无法启动报错Removing-obsolete-files-from-server…-Could-not-clean-server-。。。。"><a href="#问题：项目无法启动报错Removing-obsolete-files-from-server…-Could-not-clean-server-。。。。" class="headerlink" title="问题：项目无法启动报错Removing obsolete files from server… Could not clean server 。。。。"></a>问题：项目无法启动报错Removing obsolete files from server… Could not clean server 。。。。</h2><h3 id="用了百度上的各种方法都没用"><a href="#用了百度上的各种方法都没用" class="headerlink" title="用了百度上的各种方法都没用"></a>用了百度上的各种方法都没用</h3><ul>
+<li>首先尝试了把Tomcat删除后再重新建立，然而没用</li>
+<li>第二个方法是保证eclipse中tomcat的server.xml与Tomcat根目录下conf/server.xml保持一直，然后删除eclipse的Workspace工作目录下的.metadata.pl  ugins\org.eclipse.wst.server.core中temp0文件夹中所有文件，然而对我的项目依旧没用，这时候以及很崩溃了。。。。。</li>
+<li><p>最后我又看到网上是说eclipse的版本和Tomcat版本不匹配？？但是之前为毛可以运行我很怀疑？于是我把Tomcat原来的7.0版本换成了6.0，总算是有点用了。亲测最好用的方法还是把EClipse那个大头文件删了重新装最好办哈哈哈。</p>
+</li>
+<li><p>Tomcat编译时报错<br>严重: A child container failed during start<br>java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/lab]]<br> at java.util.concurrent.FutureTask.report(Unknown Source)<br> at java.util.concurrent.FutureTask.get(Unknown Source)<br> at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:1123)<br> at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:816)<br> at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)<br> at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)<br> at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)<br> at java.util.concurrent.FutureTask.run(Unknown Source)<br> at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)<br> at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)<br> at java.lang.Thread.run(Unknown Source)<br>Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/lab]]<br> at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:154)<br> … 6 more<br>Caused by: java.lang.NoClassDefFoundError: org/springframework/web/context/WebApplicationContext<br> at java.lang.Class.getDeclaredFields0(Native Method)<br> at java.lang.Class.privateGetDeclaredFields(Unknown Source)<br> at java.lang.Class.getDeclaredFields(Unknown Source)<br> at org.apache.catalina.util.Introspection.getDeclaredFields(Introspection.java:106)<br> at org.apache.catalina.startup.WebAnnotationSet.loadFieldsAnnotation(WebAnnotationSet.java:270)<br> at org.apache.catalina.startup.WebAnnotationSet.loadApplicationServletAnnotations(WebAnnotationSet.java:139)<br> at org.apache.catalina.startup.WebAnnotationSet.loadApplicationAnnotations(WebAnnotationSet.java:65)<br> at org.apache.catalina.startup.ContextConfig.applicationAnnotationsConfig(ContextConfig.java:415)<br> at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:892)<br> at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:386)<br> at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)<br> at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)<br> at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5380)<br> at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)<br> … 6 more<br>Caused by: java.lang.ClassNotFoundException:<br>org.springframework.web.context.WebApplicationContext<br> at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1720)<br> at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1571)<br> … 20 more</p>
+<p>可以试试clean一下项目再重新发布，如果没用就去看看配置文件，配置文件肯定有错误了。</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/04/18/Rewivew01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1064,7 +1192,7 @@ uppercase 和 lowercase 将文本转换为全大写和全小写字符。
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
