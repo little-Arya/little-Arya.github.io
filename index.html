@@ -321,7 +321,32 @@
       
         
           
-            
+            <h1 id="Spring是什么"><a href="#Spring是什么" class="headerlink" title="Spring是什么"></a>Spring是什么</h1><p>  Spring是分层的 Java SE/EE应用 full-stack 轻量级开源框架，以 IoC（Inverse Of Control： 反转控制）和 AOP（Aspect Oriented Programming：面向切面编程）为内核，提供了展现层 Spring MVC 和持久层 Spring JDBC 以及业务层事务管理等众多的企业级应用技术，还能整合开源世界众多 著名的第三方框架和类库，逐渐成为使用最多的Java EE 企业应用开源框架。 </p>
+<h2 id="Spring的发展历程及优势"><a href="#Spring的发展历程及优势" class="headerlink" title="Spring的发展历程及优势"></a>Spring的发展历程及优势</h2><p>   1997 年 IBM提出了EJB 的思想<br>   1998 年，SUN制定开发标准规范 EJB1.0<br>   1999 年，EJB1.1 发布<br>   2001 年，EJB2.0 发布<br>   2003 年，EJB2.1 发布<br>   2006 年，EJB3.0 发布   Rod Johnson（spring之父）<br>              Expert One-to-One J2EE Design and Development(2002)    阐述了 J2EE 使用EJB 开发设计的优点及解决方案    Expert One-to-One J2EE Development without EJB(2004)    阐述了 J2EE 开发不使用 EJB的解决方式（Spring 雏形）<br>   2017 年 9 月份发布了 spring 的最新版本 spring 5.0 通用版（GA） </p>
+<p>   优势：<br>   方便解耦，简化开发。 通过 Spring提供的 IoC容器，可以将对象间的依赖关系交由 Spring进行控制，避免硬编码所造 成的过度程序耦合。用户也不必再为单例模式类、属性文件解析等这些很底层的需求编写代码，可 以更专注于上层的应用。 </p>
+<p>   AOP编程的支持  通过 Spring的 AOP 功能，方便进行面向切面的编程，许多不容易用传统OOP 实现的功能可以通过 AOP 轻松应付。</p>
+<p>   声明式事务的支持  可以将我们从单调烦闷的事务管理代码中解脱出来，通过声明式方式灵活的进行事务的管理， 提高开发效率和质量。 </p>
+<p>   方便程序的测试  可以用非容器依赖的编程方式进行几乎所有的测试工作，测试不再是昂贵的操作，而是随手可 做的事情。</p>
+<p>   方便集成各种优秀框架  Spring可以降低各种框架的使用难度，提供了对各种优秀框架（Struts、Hibernate、Hessian、Quartz 等）的直接支持。 降低 JavaEE API的使用难度  Spring对 JavaEE API（如 JDBC、JavaMail、远程调用等）进行了薄薄的封装层，使这些 API 的 使用难度大为降低。 </p>
+<p>   Java源码是经典学习范例  Spring的源代码设计精妙、结构清晰、匠心独用，处处体现着大师对Java 设计模式灵活运用以 及对 Java技术的高深造诣。它的源代码无意是 Java 技术的最佳实践的范例。 </p>
+<h2 id="IOC的概念"><a href="#IOC的概念" class="headerlink" title="IOC的概念"></a>IOC的概念</h2><p>   控制反转（Inversion of control）把创建对象的权利交给框架，是框架的重要特征。它包括依赖注入和依赖查找。</p>
+<h3 id="程序的耦合"><a href="#程序的耦合" class="headerlink" title="程序的耦合"></a>程序的耦合</h3><p>   耦合性(Coupling)，也叫耦合度，是对模块间关联程度的度量。耦合的强弱取决于模块间接口的复杂性、调 用模块的方式以及通过界面传送数据的多少。模块间的耦合度是指模块之间的依赖关系，包括控制关系、调用关系、数据传递关系。模块间联系越多，其耦合性越强，同时表明其独立性越差( 降低耦合性，可以提高其独立 性)。耦合性存在于各个领域，而非软件设计中独有的，但是我们只讨论软件工程中的耦合。 在软件工程中，耦合指的就是就是对象之间的依赖性。对象之间的耦合越高，维护成本越高。因此对象的设计应使类和构件之间的耦合最小。软件设计中通常用耦合度和内聚度作为衡量模块独立程度的标准。划分模块的一个 准则就是高内聚低耦合。</p>
+<h3 id="工厂模式解耦"><a href="#工厂模式解耦" class="headerlink" title="工厂模式解耦"></a>工厂模式解耦</h3><p>   在实际开发中我们可以把三层的对象都使用配置文件配置起来，当启动服务器应用加载的时候，让一个类中的方法通过读取配置文件，把这些对象创建出来并存起来。在接下来的使用的时候，直接拿过来用就好了。 那么，这个读取配置文件，创建和获取三层对象的类就是工厂。 </p>
+<h3 id="IOC中的标签"><a href="#IOC中的标签" class="headerlink" title="IOC中的标签"></a>IOC中的标签</h3><p>   一、bean标签<br>   作用：  用于配置对象让 spring 来创建的。  默认情况下它调用的是类中的无参构造函数。如果没有无参构造函数则不能创建成功。 属性：  id：给对象在容器中提供一个唯一标识。用于获取对象。  class：指定类的全限定类名。用于反射创建对象。默认情况下调用无参构造函数。<br>   scope：指定对象的作用范围。   </p>
+<pre><code>* singleton :默认值，单例的.   
+* prototype :多例的.  
+* request :WEB 项目中,Spring 创建一个 Bean 的对象,将对象存入到 request 域中. 
+* session :WEB 项目中,Spring 创建一个 Bean 的对象,将对象存入到 session 域中.  
+* global session :WEB 项目中,应用在 Portlet 环境.如果没有 Portlet 环境那么 globalSession 相当于 session. 
+</code></pre><p>   init-method：指定类中的初始化方法名称。<br>   destroy-method：指定类中销毁方法名称。 </p>
+<p>   bean 的作用范围和生命周期 ：<br>   单例对象：scope=”singleton”   一个应用只有一个对象的实例。它的作用范围就是整个引用。<br>   生命周期：    对象出生：当应用加载，创建容器时，对象就被创建了。<br>   对象活着：只要容器在，对象一直活着。<br>   对象死亡：当应用卸载，销毁容器时，对象就被销毁了。<br>   多例对象：scope=”prototype”   每次访问对象时，都会重新创建对象实例。<br>   生命周期：    对象出生：当使用对象时，创建新的对象实例。<br>   对象活着：只要对象在使用中，就一直活着。<br>   对象死亡：当对象长时间不用时，被 java 的垃圾回收器回收了。 </p>
+<p>   实例化Bean的三种方式：<br>   第一种方式：使用默认无参构造函数  <!--在默认情况下：   它会根据默认无参构造函数来创建类对象。如果 bean 中没有默认无参构造函数，将会创建失败。 --> </p>
+<p>   第二种方式：spring管理静态工厂-使用静态工厂的方法创建对象  <!-- 此种方式是:   使用 StaticFactory 类中的静态方法 createAccountService 创建对象，并存入 spring 容器  
+   id 属性：指定 bean 的 id，用于从容器中获取  
+   class 属性：指定静态工厂的全限定类名  
+   factory-method 属性：指定生产对象的静态方法  --> </p>
+<p>   第三种方式：spring管理实例工厂-使用实例工厂的方法创建对象。<br>   /<em>** 模拟一个实例工厂，创建业务层实现类  </em> 此工厂创建对象，必须现有工厂实例对象，再调用方法  */<br>   &lt; !– 此种方式是：    先把工厂的创建交给 spring 来管理。   然后在使用工厂的 bean 来调用里面的方法   factory-bean 属性：用于指定实例工厂 bean 的 id。   factory-method 属性：用于指定实例工厂中创建对象的方法。  –&gt; </p>
+
           
         
       
