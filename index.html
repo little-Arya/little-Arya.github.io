@@ -250,6 +250,125 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/10/09/Arya14/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiao zhongying">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images\01.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Arya">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/09/Arya14/" itemprop="url">Arya14（SSM框架的第一步--SpringMVC的学习）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-09T16:58:00+08:00">
+                2019-10-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/09/21/Arya13/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -332,20 +451,25 @@
 <h2 id="IOC的概念"><a href="#IOC的概念" class="headerlink" title="IOC的概念"></a>IOC的概念</h2><p>   控制反转（Inversion of control）把创建对象的权利交给框架，是框架的重要特征。它包括依赖注入和依赖查找。</p>
 <h3 id="程序的耦合"><a href="#程序的耦合" class="headerlink" title="程序的耦合"></a>程序的耦合</h3><p>   耦合性(Coupling)，也叫耦合度，是对模块间关联程度的度量。耦合的强弱取决于模块间接口的复杂性、调 用模块的方式以及通过界面传送数据的多少。模块间的耦合度是指模块之间的依赖关系，包括控制关系、调用关系、数据传递关系。模块间联系越多，其耦合性越强，同时表明其独立性越差( 降低耦合性，可以提高其独立 性)。耦合性存在于各个领域，而非软件设计中独有的，但是我们只讨论软件工程中的耦合。 在软件工程中，耦合指的就是就是对象之间的依赖性。对象之间的耦合越高，维护成本越高。因此对象的设计应使类和构件之间的耦合最小。软件设计中通常用耦合度和内聚度作为衡量模块独立程度的标准。划分模块的一个 准则就是高内聚低耦合。</p>
 <h3 id="工厂模式解耦"><a href="#工厂模式解耦" class="headerlink" title="工厂模式解耦"></a>工厂模式解耦</h3><p>   在实际开发中我们可以把三层的对象都使用配置文件配置起来，当启动服务器应用加载的时候，让一个类中的方法通过读取配置文件，把这些对象创建出来并存起来。在接下来的使用的时候，直接拿过来用就好了。 那么，这个读取配置文件，创建和获取三层对象的类就是工厂。 </p>
-<h3 id="IOC中的标签"><a href="#IOC中的标签" class="headerlink" title="IOC中的标签"></a>IOC中的标签</h3><p>   一、bean标签<br>   作用：  用于配置对象让 spring 来创建的。  默认情况下它调用的是类中的无参构造函数。如果没有无参构造函数则不能创建成功。 属性：  id：给对象在容器中提供一个唯一标识。用于获取对象。  class：指定类的全限定类名。用于反射创建对象。默认情况下调用无参构造函数。<br>   scope：指定对象的作用范围。   </p>
+<h3 id="IOC中的标签"><a href="#IOC中的标签" class="headerlink" title="IOC中的标签"></a>IOC中的标签</h3><p>   一、bean标签<br>   作用：  用于配置对象让 spring 来创建的。  默认情况下它调用的是类中的无参构造函数。如果没有无参构造函数则不能创建成功。 属性：<br>   id：给对象在容器中提供一个唯一标识。用于获取对象。  class：指定类的全限定类名。用于反射创建对象。默认情况下调用无参构造函数。<br>   scope：指定对象的作用范围。   </p>
 <pre><code>* singleton :默认值，单例的.   
 * prototype :多例的.  
 * request :WEB 项目中,Spring 创建一个 Bean 的对象,将对象存入到 request 域中. 
 * session :WEB 项目中,Spring 创建一个 Bean 的对象,将对象存入到 session 域中.  
 * global session :WEB 项目中,应用在 Portlet 环境.如果没有 Portlet 环境那么 globalSession 相当于 session. 
 </code></pre><p>   init-method：指定类中的初始化方法名称。<br>   destroy-method：指定类中销毁方法名称。 </p>
-<p>   bean 的作用范围和生命周期 ：<br>   单例对象：scope=”singleton”   一个应用只有一个对象的实例。它的作用范围就是整个引用。<br>   生命周期：    对象出生：当应用加载，创建容器时，对象就被创建了。<br>   对象活着：只要容器在，对象一直活着。<br>   对象死亡：当应用卸载，销毁容器时，对象就被销毁了。<br>   多例对象：scope=”prototype”   每次访问对象时，都会重新创建对象实例。<br>   生命周期：    对象出生：当使用对象时，创建新的对象实例。<br>   对象活着：只要对象在使用中，就一直活着。<br>   对象死亡：当对象长时间不用时，被 java 的垃圾回收器回收了。 </p>
+<p>   bean 的作用范围和生命周期 ：<br>   单例对象：scope=”singleton”   一个应用只有一个对象的实例。它的作用范围就是整个引用。<br>   生命周期：    对象出生：当应用加载，创建容器时，对象就被创建了。<br>   对象活着：只要容器在，对象一直活着。<br>   对象死亡：当应用卸载，销毁容器时，对象就被销毁了。<br>   多例对象：scope=”prototype”   每次访问对象时，都会重新创建对象实例。<br>   生命周期：<br>     对象出生：当使用对象时，创建新的对象实例。<br>     对象活着：只要对象在使用中，就一直活着。<br>     对象死亡：当对象长时间不用时，被 java 的垃圾回收器回收了。 </p>
 <p>   实例化Bean的三种方式：<br>   第一种方式：使用默认无参构造函数  <!--在默认情况下：   它会根据默认无参构造函数来创建类对象。如果 bean 中没有默认无参构造函数，将会创建失败。 --> </p>
 <p>   第二种方式：spring管理静态工厂-使用静态工厂的方法创建对象  <!-- 此种方式是:   使用 StaticFactory 类中的静态方法 createAccountService 创建对象，并存入 spring 容器  
    id 属性：指定 bean 的 id，用于从容器中获取  
    class 属性：指定静态工厂的全限定类名  
    factory-method 属性：指定生产对象的静态方法  --> </p>
 <p>   第三种方式：spring管理实例工厂-使用实例工厂的方法创建对象。<br>   /<em>** 模拟一个实例工厂，创建业务层实现类  </em> 此工厂创建对象，必须现有工厂实例对象，再调用方法  */<br>   &lt; !– 此种方式是：    先把工厂的创建交给 spring 来管理。   然后在使用工厂的 bean 来调用里面的方法   factory-bean 属性：用于指定实例工厂 bean 的 id。   factory-method 属性：用于指定实例工厂中创建对象的方法。  –&gt; </p>
+<h3 id="spring-的依赖注入"><a href="#spring-的依赖注入" class="headerlink" title="spring 的依赖注入"></a>spring 的依赖注入</h3><p>  依赖注入：Dependency Injection。它是 spring 框架核心 ioc 的具体实现。 我们的程序在编写时，通过控制反转，把对象的创建交给了 spring，但是代码中不可能出现没有依赖的情况。 ioc 解耦只是降低他们的依赖关系，但不会消除。例如：我们的业务层仍会调用持久层的方法。 那这种业务层和持久层的依赖关系，在使用 spring 之后，就让 spring 来维护了。 简单的说，就是坐等框架把持久层对象传入业务层，而不用我们自己去获取。 </p>
+<p>  1.使用构造函数的方式，给 service 中的属性传值。<br>   要求：   类中需要提供一个对应参数列表的构造函数。<br>   涉及的标签：   constructor-arg<br>   属性：<br>      index:指定参数在构造函数参数列表的索引位置<br>      type:指定参数在构造函数中的数据类型<br>      name:指定参数在构造函数中的名称     用这个找给谁赋值<br>    =======上面三个都是找给谁赋值，下面两个指的是赋什么值的==============<br>      value:它能赋的值是基本数据类型和 String 类型     ref:它能赋的值是其他 bean 类型，也就是说，必须得是在配置文件中配置过的 bean  。</p>
+<ol start="2">
+<li>通过配置文件给 bean 中的属性传值：使用 set 方法的方式<br>属性：<br> name：找的是类中 set 方法后面的部分<br> ref：给属性赋值是其他 bean 类型的<br> value：给属性赋值是基本数据类型和 string 类型的<br>  (实际开发中，此种方式用的较多)。 </li>
+</ol>
 
           
         
@@ -413,7 +537,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/09/05/Arya12/" itemprop="url">Arya12</a></h1>
+                <a class="post-title-link" href="/2019/09/05/Arya12/" itemprop="url">Arya12（JAVA笔记）</a></h1>
         
 
         <div class="post-meta">
@@ -1415,163 +1539,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/05/06/Arya04/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xiao zhongying">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images\01.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Arya">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/05/06/Arya04/" itemprop="url">Arya04</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-06T21:48:22+08:00">
-                2019-05-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="今天学会的一点内容（5-06）"><a href="#今天学会的一点内容（5-06）" class="headerlink" title="今天学会的一点内容（5.06）"></a>今天学会的一点内容（5.06）</h1><p>   今天知道了jsp页面内的输入框里面的内容怎么传到另一个jsp页面。（之前被误导以为要把内容保存至session中然后上传到指定页面，果然还是想太多）<br>   这是我的要传页面的代码（最后证明还是被误导了，这只能通过数据库操作）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;form  method=&quot;post&quot; action=&quot;success.jsp&quot;&gt;</span><br><span class="line">&lt;input  type=&quot;text&quot;name=&quot;f1&quot;value=&quot;$&#123;f1&#125;&quot;style=&quot;width:800px; height:20px;text-align:center&quot;placeholder=&quot;请输入标题&quot; /&gt;</span><br><span class="line"> &lt;input type=&quot;text&quot;name=&quot;f2&quot;value=&quot;$&#123;f2&#125;&quot;style=&quot;width:800px; height:300px;text-align:center&quot;placeholder=&quot;请输入内容&quot; /&gt;</span><br><span class="line">&lt;input type=&quot;submit&quot; value=&quot;提交发布&quot;  /&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
-<pre><code>接受页面的代码
-
-&lt;% request.setCharacterEncoding(&quot;utf-8&quot;);%&gt;
-            &lt;%=request.getParameter(&quot;f1&quot;)%&gt; &lt;hr&gt;&lt;br&gt;
-            &lt;%=request.getParameter(&quot;f2&quot;) %&gt;
-</code></pre><p>   我这用的是post方法传表单数据，post方法比较保密，比如传密码是不错的选择。除了这个还有GET方法，GET方法是浏览器默认传递参数的方法，一些敏感信息，如密码等建议不使用GET方法。用get时，传输数据的大小有限制 （注意不是参数的个数有限制），最大为1024字节。</p>
-<p>   value=”${f1}”这是为了保存文本框内的值，setCharacterEncoding(“utf-8”)是因为没弄的时候都是乱码，所以设置了就能争取显示中文了，还有：<br>   getParameter(): 使用 request.getParameter() 方法来获取表单参数的值。<br>   getParameterValues(): 获得如checkbox类（名字相同，但值有多个）的数据。 接收数组变量 ，如checkbox类型<br>   getParameterNames():该方法可以取得所有变量的名称，该方法返回一个 Enumeration。<br>   getInputStream():调用此方法来读取来自客户端的二进制数据流。</p>
-<h1 id="还有不懂的其他问题（都解决）"><a href="#还有不懂的其他问题（都解决）" class="headerlink" title="还有不懂的其他问题（都解决）"></a>还有不懂的其他问题（都解决）</h1><p>   1.如何让那些文本框内的值一传到另一个页面就永不消失（这只能通过数据库）<br>   2.如何设置评论呢</p>
-<h1 id="今天课比较多-暂时就先解决设置过滤器的问题（5-07）"><a href="#今天课比较多-暂时就先解决设置过滤器的问题（5-07）" class="headerlink" title="今天课比较多 暂时就先解决设置过滤器的问题（5.07）"></a>今天课比较多 暂时就先解决设置过滤器的问题（5.07）</h1><pre><code>在主页中想要实现某些操作但是得要求用户进行了登录操作才可，这时候就得要设置Filter过滤类，主要是过滤器实现对未登录用户访问JSP页面进行控制。这样才能保证用户访问某个页面的前提是已经登录。我是先设置LoginFilter类，这个类里面主要是检测用户信息是否在Session类中，如果是则直接跳转到指定页面，如果不是，则会跳转到登陆页面，登陆后就可以跳转到指定页面了。
-</code></pre><h1 id="过滤器设置成功，就是判断加设置。将message和title保存到数据库然后通过读取数据库再显示在主页面上，两个很关键的都是怎么读取数据库。"><a href="#过滤器设置成功，就是判断加设置。将message和title保存到数据库然后通过读取数据库再显示在主页面上，两个很关键的都是怎么读取数据库。" class="headerlink" title="过滤器设置成功，就是判断加设置。将message和title保存到数据库然后通过读取数据库再显示在主页面上，两个很关键的都是怎么读取数据库。"></a>过滤器设置成功，就是判断加设置。将message和title保存到数据库然后通过读取数据库再显示在主页面上，两个很关键的都是怎么读取数据库。</h1><p>  发布内容的功能就是将标题、内容存到数据库里然后再jsp页面上读取出来，当然很重要的是要连接数据库。这里的连接数据库实际上都是在Jsp页面上操作的<br>     &lt;%<br>        try {<br>            Class.forName(“com.mysql.jdbc.Driver”);  ////驱动程序名<br>            String url = “jdbc:mysql://localhost:3306/A20170512”; //数据库名<br>            String username = “root”;  //数据库用户名<br>            String password = “123456”;  //数据库用户密码<br>            Connection conn = DriverManager.getConnection(url, username, password);  //连接状态</p>
-<pre><code>        if(conn != null){  
-            out.print(&quot; &quot;);  
-            out.print(&quot;&lt;br /&gt;&quot;); 
-%&gt;
-
-&lt;%
-            Statement stmt = null;  
-            ResultSet rs = null;  
-            ResultSet ps =null;
-            String sql = &quot;SELECT * FROM Message;&quot;;  //查询语句
-           // String rep=&quot;SELECT * FROM Comment &quot;;
-            stmt = conn.createStatement();  
-            rs = stmt.executeQuery(sql);  
-          //  ps = stmt.executeQuery(rep);
-            out.print(&quot; &quot;);  
-    out.print(&quot;&lt;br/&gt;&quot;);
-            while (rs.next()) {%>
-    
-     <div class="all">            
-      <div><br> <h2><%=rs.getstring("title") %> </%=rs.getstring("title")></h2>
-         <p></p><h4><%=rs.getstring("message") %></%=rs.getstring("message")></h4><p></p>
-      <li><%=rs.getstring("username") %>&nbsp;&nbsp;&nbsp;<a href="Message.jsp?id=<%=rs.getString(" id")%>">评论</a>&nbsp;</%=rs.getstring("username")></li>
-      <br>
- 
-    </div><br><br>   </div> 
-    <%} }else{ out.print(&quot;连接失败！&quot;); } }catch (exception e) { out.print(&quot;数据库连接异常！&quot;); }%&gt; < code></%}></code></pre><p>  连接数据库，操作数据库，解决之前的问题关键就是把帖子和评论都是先存进数据库里面的，就是一写进去就存进去了，之后在jsp页面中读取出来。<br>  上面的代码就是在数据库里面读取。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1624,7 +1591,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
