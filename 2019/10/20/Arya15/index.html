@@ -79,14 +79,17 @@
 
 
 
+<meta name="description" content="框架概述什么是框架什么是框架  框架（Framework）是整个或部分系统的可重用设计，表现为一组抽象构件及构件实例间交互的方法;另一种 定义认为，框架是可被应用开发者定制的应用骨架。前者是从应用方面而后者是从目的方面给出的定义。  简而言之，框架其实就是某种应用的半成品，就是一组组件，供你选用完成你自己的系统。简单说就是使用别 人搭好的舞台，你来做表演。而且，框架一般是成熟的，不断升级的软件。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Arya15（SSM框架的第三步--Mybatis的学习）">
 <meta property="og:url" content="http://Arya.com/2019/10/20/Arya15/index.html">
 <meta property="og:site_name" content="Arya">
+<meta property="og:description" content="框架概述什么是框架什么是框架  框架（Framework）是整个或部分系统的可重用设计，表现为一组抽象构件及构件实例间交互的方法;另一种 定义认为，框架是可被应用开发者定制的应用骨架。前者是从应用方面而后者是从目的方面给出的定义。  简而言之，框架其实就是某种应用的半成品，就是一组组件，供你选用完成你自己的系统。简单说就是使用别 人搭好的舞台，你来做表演。而且，框架一般是成熟的，不断升级的软件。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-20T09:45:35.893Z">
+<meta property="og:updated_time" content="2019-10-25T13:09:16.635Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Arya15（SSM框架的第三步--Mybatis的学习）">
+<meta name="twitter:description" content="框架概述什么是框架什么是框架  框架（Framework）是整个或部分系统的可重用设计，表现为一组抽象构件及构件实例间交互的方法;另一种 定义认为，框架是可被应用开发者定制的应用骨架。前者是从应用方面而后者是从目的方面给出的定义。  简而言之，框架其实就是某种应用的半成品，就是一组组件，供你选用完成你自己的系统。简单说就是使用别 人搭好的舞台，你来做表演。而且，框架一般是成熟的，不断升级的软件。">
 
 
 
@@ -317,7 +320,14 @@
       
 
       
-        
+        <h1 id="框架概述"><a href="#框架概述" class="headerlink" title="框架概述"></a>框架概述</h1><h2 id="什么是框架"><a href="#什么是框架" class="headerlink" title="什么是框架"></a>什么是框架</h2><h3 id="什么是框架-1"><a href="#什么是框架-1" class="headerlink" title="什么是框架"></a>什么是框架</h3><p>  框架（Framework）是整个或部分系统的可重用设计，表现为一组抽象构件及构件实例间交互的方法;另一种 定义认为，框架是可被应用开发者定制的应用骨架。前者是从应用方面而后者是从目的方面给出的定义。  简而言之，框架其实就是某种应用的半成品，就是一组组件，供你选用完成你自己的系统。简单说就是使用别 人搭好的舞台，你来做表演。而且，框架一般是成熟的，不断升级的软件。  </p>
+<h3 id="框架要解决的问题"><a href="#框架要解决的问题" class="headerlink" title="框架要解决的问题"></a>框架要解决的问题</h3><p>  框架要解决的最重要的一个问题是技术整合的问题，在 J2EE 的 框架中，有着各种各样的技术，不同的 软件企业需要从 J2EE 中选择不同的技术，这就使得软件企业最终的应用依赖于这些技术，技术自身的复杂性和技 术的风险性将会直接对应用造成冲击。而应用是软件企业的核心，是竞争力的关键所在，因此应该将应用自身的设计和具体的实现技术解耦。这样，软件企业的研发将集中在应用的设计上，而不是具体的技术实现，技术实现是应 用的底层支撑，它不应该直接对应用产生影响。 </p>
+<p>  框架一般处在低层应用平台（如 J2EE）和高层业务逻辑之间的中间层。 </p>
+<h3 id="软件开发的分层重要性"><a href="#软件开发的分层重要性" class="headerlink" title="软件开发的分层重要性"></a>软件开发的分层重要性</h3><p>   框架的重要性在于它实现了部分功能，并且能够很好的将低层应用平台和高层业务逻辑进行了缓和。为了实现<br>   软件工程中的“高内聚、低耦合”。把问题划分开来各个解决，易于控制，易于延展，易于分配资源。我们常见的 MVC 软件设计思想就是很好的分层思想。 </p>
+<h3 id="分层开发下的常见框架"><a href="#分层开发下的常见框架" class="headerlink" title="分层开发下的常见框架"></a>分层开发下的常见框架</h3><p>  常见的 JavaEE 开发框架：<br>   1、解决数据的持久化问题的框架：Mybatis:<br>   作为持久层的框架，还有一个封装程度更高的框架就是Hibernate，但这个框架因为各种原因目前在国内的 流行程度下降太多，现在公司开发也越来越少使用。目前使用 Spring Data 来实现数据持久化也是一种趋势。<br>   2、解决 WEB 层问题的 MVC 框架:SpringMVC<br>   3、解决技术整合问题的框架：Spring</p>
+<h3 id="MyBatis-框架概述"><a href="#MyBatis-框架概述" class="headerlink" title="MyBatis 框架概述"></a>MyBatis 框架概述</h3><p>   mybatis是一个优秀的基于 java 的持久层框架，它内部封装了 jdbc，使开发者只需要关注 sql语句本身， 而不需要花费精力去处理加载驱动、创建连接、创建 statement 等繁杂的过程。 mybatis通过xml 或注解的方式将要执行的各种statement配置起来，并通过java对象和statement 中 sql 的动态参数进行映射生成最终执行的 sql 语句，最后由 mybatis 框架执行 sql 并将结果映射为 java 对象并 返回。 采用 ORM 思想解决了实体和数据库映射的问题，对 jdbc进行了封装，屏蔽了 jdbc api 底层访问细节，使我 们不用与 jdbc api 打交道，就可以完成对数据库的持久化操作。 为了我们能够更好掌握框架运行的内部过程，并且有更好的体验，下面我们将从自定义 Mybatis 框架开始来 学习框架。此时我们将会体验框架从无到有的过程体验，也能够很好的综合前面阶段所学的基础。  </p>
+<h3 id="jdbc-问题分析"><a href="#jdbc-问题分析" class="headerlink" title="jdbc 问题分析"></a>jdbc 问题分析</h3><p>   1、数据库链接创建、释放频繁造成系统资源浪费从而影响系统性能，如果使用数据库链接池可解决此问题。<br>   2、Sql 语句在代码中硬编码，造成代码不易维护，实际应用 sql 变化的可能较大，sql 变动需要改变 java 代码。<br>   3、使用 preparedStatement 向占有位符号传参数存在硬编码，因为 sql 语句的 where 条件不一定，可能 多也可能少，修改 sql 还要修改代码，系统不易维护。<br>   4、对结果集解析存在硬编码（查询列名），sql 变化导致解析代码变化，系统不易维护，如果能将数据库记 录封装成 pojo对象解析比较方便。</p>
+
       
     </div>
     
@@ -370,8 +380,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/09/Arya14/" rel="next" title="Arya14（SSM框架的第一步--SpringMVC的学习）">
-                <i class="fa fa-chevron-left"></i> Arya14（SSM框架的第一步--SpringMVC的学习）
+              <a href="/2019/10/09/Arya14/" rel="next" title="Arya14（SSM框架的第二步--SpringMVC的学习）">
+                <i class="fa fa-chevron-left"></i> Arya14（SSM框架的第二步--SpringMVC的学习）
               </a>
             
           </div>
@@ -379,6 +389,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/25/Ayra16/" rel="prev" title="Ayra16（SSM学习笔记）">
+                Ayra16（SSM学习笔记） <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -430,8 +444,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -448,7 +471,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -523,6 +546,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#框架概述"><span class="nav-number">1.</span> <span class="nav-text">框架概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是框架"><span class="nav-number">1.1.</span> <span class="nav-text">什么是框架</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是框架-1"><span class="nav-number">1.1.1.</span> <span class="nav-text">什么是框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#框架要解决的问题"><span class="nav-number">1.1.2.</span> <span class="nav-text">框架要解决的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件开发的分层重要性"><span class="nav-number">1.1.3.</span> <span class="nav-text">软件开发的分层重要性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分层开发下的常见框架"><span class="nav-number">1.1.4.</span> <span class="nav-text">分层开发下的常见框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MyBatis-框架概述"><span class="nav-number">1.1.5.</span> <span class="nav-text">MyBatis 框架概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jdbc-问题分析"><span class="nav-number">1.1.6.</span> <span class="nav-text">jdbc 问题分析</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
