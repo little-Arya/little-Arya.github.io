@@ -86,10 +86,12 @@
 <meta property="og:site_name" content="Arya">
 <meta property="og:description" content="IDEA常用的快捷键   Alt+回车 导入包,自动修正   Ctrl+N   查找类   Ctrl+Shift+N 查找文件   Ctrl+Alt+L  格式化代码   Ctrl+Alt+O 优化导入的类和包   Alt+Insert 生成代码(如get,set方法,构造函数等)   Ctrl+E或者Alt+Shift+C  最近更改的代码   Ctrl+R 替换文本   Ctrl+F 查找文本">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-25T13:10:07.025Z">
+<meta property="og:image" content="http://arya.com/image/13.PNG">
+<meta property="og:updated_time" content="2019-10-26T09:06:30.438Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ayra16（SSM学习笔记）">
 <meta name="twitter:description" content="IDEA常用的快捷键   Alt+回车 导入包,自动修正   Ctrl+N   查找类   Ctrl+Shift+N 查找文件   Ctrl+Alt+L  格式化代码   Ctrl+Alt+O 优化导入的类和包   Alt+Insert 生成代码(如get,set方法,构造函数等)   Ctrl+E或者Alt+Shift+C  最近更改的代码   Ctrl+R 替换文本   Ctrl+F 查找文本">
+<meta name="twitter:image" content="http://arya.com/image/13.PNG">
 
 
 
@@ -324,6 +326,7 @@
 <p>  代码标签输入完成后，按Tab，生成代码。<br>  选中文本，按Ctrl+Shift+F7 ，高亮显示所有该文本，按Esc高亮消失。<br>  Ctrl+W 选中代码，连续按会有其他效果<br>  选中文本，按Alt+F3 ，逐个往下查找相同文本，并高亮显示。<br>  Ctrl+Up/Down 光标跳转到第一行或最后一行下<br>  Ctrl+B 快速打开光标处的类或方法 </p>
 <h2 id="Intellij-IDEA最常用快捷键"><a href="#Intellij-IDEA最常用快捷键" class="headerlink" title="Intellij IDEA最常用快捷键"></a>Intellij IDEA最常用快捷键</h2><p>   1.Ctrl＋E，可以显示最近编辑的文件列表<br>   2.Shift＋Click可以关闭文件<br>   3.Ctrl＋[或]可以跳到大括号的开头结尾<br>   4.Ctrl＋Shift＋Backspace可以跳转到上次编辑的地方<br>   5.Ctrl＋F12，可以显示当前文件的结构<br>   6.Ctrl＋F7可以查询当前元素在当前文件中的引用，然后按F3可以选择<br>   7.Ctrl＋N，可以快速打开类</p>
 <h1 id="Resources-getResourceAsStream找不到方法"><a href="#Resources-getResourceAsStream找不到方法" class="headerlink" title="Resources.getResourceAsStream找不到方法"></a>Resources.getResourceAsStream找不到方法</h1><p>   将ResourcesgetResourceAsStream(resource);改为Resources.class.getResourceAsStream(resource);</p>
+<h1 id="为什么接口的实现类里面-Override报红"><a href="#为什么接口的实现类里面-Override报红" class="headerlink" title="为什么接口的实现类里面 @Override报红"></a>为什么接口的实现类里面 @Override报红</h1><p>  @Override注解用来检测子类对父类或接口的方法的重写是否正确，在使用IDEA时给某个接口写实现类时写了这个注解就报红，百度了下才知道原来这是jdk1.5时的一个bug，在1.6时已经被修复。但是我使用的是1.8的，于是（其实不加这个注解也行）<br>  <img src="/image/13.PNG" alt="Alt text"></p>
 
       
     </div>
@@ -549,7 +552,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#IDEA常用的快捷键"><span class="nav-number">1.</span> <span class="nav-text">IDEA常用的快捷键</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Intellij-IDEA最常用快捷键"><span class="nav-number">1.1.</span> <span class="nav-text">Intellij IDEA最常用快捷键</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Resources-getResourceAsStream找不到方法"><span class="nav-number">2.</span> <span class="nav-text">Resources.getResourceAsStream找不到方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#IDEA常用的快捷键"><span class="nav-number">1.</span> <span class="nav-text">IDEA常用的快捷键</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Intellij-IDEA最常用快捷键"><span class="nav-number">1.1.</span> <span class="nav-text">Intellij IDEA最常用快捷键</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Resources-getResourceAsStream找不到方法"><span class="nav-number">2.</span> <span class="nav-text">Resources.getResourceAsStream找不到方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#为什么接口的实现类里面-Override报红"><span class="nav-number">3.</span> <span class="nav-text">为什么接口的实现类里面 @Override报红</span></a></li></ol></div>
             
 
           </div>
