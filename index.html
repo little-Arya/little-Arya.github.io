@@ -250,6 +250,136 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/11/10/Arya17/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiao zhongying">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images\01.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Arya">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/10/Arya17/" itemprop="url">Arya17</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-10T09:26:30+08:00">
+                2019-11-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="窗口类型"><a href="#窗口类型" class="headerlink" title="窗口类型"></a>窗口类型</h1><p>  1、Frame是框架窗体，有边框的，Panel是面板，无边框，一般把几个Panel加到一个Frame上。Sun公司的定义：Frame是带标题和边框的最顶层窗体；Panel是个最简单的容器类，它提供空间让程序放其它组件，包括其它Panel。 添加到容器中的组件放在一个列表中。列表的顺序将定义组件在容器内的正向堆栈顺序。如果将组件添加到容器中时未指定索引，则该索引将被添加到列表尾部（此后它位于堆栈顺序的底部）。<br>  2、1.FlowLayoutpublic FlowLayout(int align,int hgap,int vgap)   创建一个新的流布局管理器，具有指定的对齐方式以及指定的水平和垂直间隙。<br>    2.2.GridLayout<br>      public GridLayout(int rows,<br>                  int cols,<br>                  int hgap,<br>                  int vgap)创建具有指定行数和列数的网格布局。<br>     3.BorderLayout<br>      public BorderLayout(int hgap,<br>                    int vgap)用指定的组件之间的间距构造水平一个边界布局。<br>     4.CardLayout<br>       public CardLayout(int hgap,<br>                  int vgap)创建一个具有指定的水平和垂直间隙的新卡片布局。</p>
+<p>   3、drawLine(int x1, int y1, int x2, int y2) ： 在此图形上下文的坐标系中，使用当前颜色在点 (x1, y1) 和 (x2, y2) 之间画一条线。<br>   drawRect(int x, int y, int width, int height) ：  绘制指定矩形的边框。<br>   JAVA是以屏幕左上角为原点（0，0）往右X增加，往下Y增加</p>
+<p>   4、DrawString(String, Font, Brush, Single, Single, StringFormat)：使用指定 Brush 的格式化特性，用指定的 Font 和 StringFormat 对象在指定的位置绘制指定的文本字符串。</p>
+<p>   5、fillRect（x,y,w,h）函数的作用是：填充一个矩形区域，x、y为起始坐标（即左上角坐标）,后面两个参数分别为：w、h,是矩形区域的宽和高,这里的20表示填充宽度20像素，15表示填充高度15像素。</p>
+<h1 id="public-int-nextInt-int-n"><a href="#public-int-nextInt-int-n" class="headerlink" title="public int nextInt(int n)"></a>public int nextInt(int n)</h1><pre><code>该方法的作用是生成一个随机的int值，该值介于[0,n)的区间，也就是0到n之间的随机int值，包含0而不包含n。
+</code></pre><h1 id="private-static-final-long-serialVersionUID-32222288883332222L"><a href="#private-static-final-long-serialVersionUID-32222288883332222L" class="headerlink" title="private static final long serialVersionUID=-32222288883332222L;"></a>private static final long serialVersionUID=-32222288883332222L;</h1><pre><code>serialVersionUID 用来表明实现序列化类的不同版本间的兼容性；如果你修改了此类, 要修改此值。否则以前用老版本的类序列化的类恢复时会出错。
+</code></pre><p>   serialVersionUID作用：<br>    相当于java类的身份证。主要用于版本控制。<br>    serialVersionUID作用是序列化时保持版本的兼容性，即在版本升级时反序列化仍保持对象的唯一性。</p>
+<h1 id="创建一个向指定-File-对象表示的文件中写入数据的文件输出流。"><a href="#创建一个向指定-File-对象表示的文件中写入数据的文件输出流。" class="headerlink" title="//创建一个向指定 File 对象表示的文件中写入数据的文件输出流。"></a>//创建一个向指定 File 对象表示的文件中写入数据的文件输出流。</h1><pre><code>public FileOutputStream(File file);
+</code></pre><p>   //创建一个向指定 File 对象表示的文件中写入数据的文件输出流。如果第二个参数为 true，则将字节写入文件末尾处，而不是写入文件开始处。<br>    public FileOutputStream(File file,boolean append);</p>
+<p>   //创建一个向具有指定名称的文件中写入数据的输出文件流。<br>    public FileOutputStream(String name);</p>
+<p>   //创建一个向具有指定 name 的文件中写入数据的输出文件流。如果第二个参数为 true，则将字节写入文件末尾处，而不是写入文件开始处。<br>    public FileOutputStream(String name,boolean append);</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/10/25/Ayra16/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -326,6 +456,9 @@
 <h2 id="Intellij-IDEA最常用快捷键"><a href="#Intellij-IDEA最常用快捷键" class="headerlink" title="Intellij IDEA最常用快捷键"></a>Intellij IDEA最常用快捷键</h2><p>   1.Ctrl＋E，可以显示最近编辑的文件列表<br>   2.Shift＋Click可以关闭文件<br>   3.Ctrl＋[或]可以跳到大括号的开头结尾<br>   4.Ctrl＋Shift＋Backspace可以跳转到上次编辑的地方<br>   5.Ctrl＋F12，可以显示当前文件的结构<br>   6.Ctrl＋F7可以查询当前元素在当前文件中的引用，然后按F3可以选择<br>   7.Ctrl＋N，可以快速打开类</p>
 <h1 id="Resources-getResourceAsStream找不到方法"><a href="#Resources-getResourceAsStream找不到方法" class="headerlink" title="Resources.getResourceAsStream找不到方法"></a>Resources.getResourceAsStream找不到方法</h1><p>   将ResourcesgetResourceAsStream(resource);改为Resources.class.getResourceAsStream(resource);</p>
 <h1 id="为什么接口的实现类里面-Override报红"><a href="#为什么接口的实现类里面-Override报红" class="headerlink" title="为什么接口的实现类里面 @Override报红"></a>为什么接口的实现类里面 @Override报红</h1><p>  @Override注解用来检测子类对父类或接口的方法的重写是否正确，在使用IDEA时给某个接口写实现类时写了这个注解就报红，百度了下才知道原来这是jdk1.5时的一个bug，在1.6时已经被修复。但是我使用的是1.8的，于是（其实不加这个注解也行）<br>  <img src="/image/13.PNG" alt="Alt text"></p>
+<h1 id="泛型术语"><a href="#泛型术语" class="headerlink" title="泛型术语"></a>泛型术语</h1><p>  以ArrayList<e>为例：<br>  &lt;&gt;念着typeof<br>  ArrayList<e>中的E称为类型参数变量，其实就是类型的占位符（传入什么类型就是什么类型）<br>  ArrayList<integer>中的Integer称为实际类型参数<br>  整个称为ArrayList<e>泛型类型<br>  整个ArrayList<integer>称为参数化的类型ParameterizedType</integer></e></integer></e></e></p>
+<p>  Set<string><br>  Enumeration<string><br>  Map&lt;String,Object&gt;<br>  Map&lt;K,V&gt;</string></string></p>
+<h1 id="java-swing中setVisible-true-方法的真正作用"><a href="#java-swing中setVisible-true-方法的真正作用" class="headerlink" title="java swing中setVisible(true);方法的真正作用"></a>java swing中setVisible(true);方法的真正作用</h1><p>  setVisible(true);方法的意思是说数据模型已经构造好了，允许JVM可以根据数据模型执行paint方法开始画图并显示到屏幕上了，并不是显示图形，而是可以运行开始画图了。这个方法和java多线程的start方法有点异曲同工之妙，start方式是允许run方法运行了，start方法和setVisible方法很相似。但为了安全起见，还是要把setVisible方法放到最后面。</p>
 
           
         
@@ -1498,136 +1631,6 @@ mybatis基于注解的入门案例：
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/05/20/Arya07/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xiao zhongying">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images\01.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Arya">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/05/20/Arya07/" itemprop="url">Arya07（Java日期时间的问题）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-20T11:09:06+08:00">
-                2019-05-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="java-util-包提供了-Date-类来封装当前的日期和时间。-Date-类提供两个构造函数来实例化-Date-对象。"><a href="#java-util-包提供了-Date-类来封装当前的日期和时间。-Date-类提供两个构造函数来实例化-Date-对象。" class="headerlink" title="java.util 包提供了 Date 类来封装当前的日期和时间。 Date 类提供两个构造函数来实例化 Date 对象。"></a>java.util 包提供了 Date 类来封装当前的日期和时间。 Date 类提供两个构造函数来实例化 Date 对象。</h1><pre><code>第一个构造函数使用当前日期和时间来初始化对象：Date( )
-第二个构造函数接收一个参数，该参数是从1970年1月1日起的毫秒数：Date(long millisec)。
-之前将时间存进数据库的时候，第一个表的时间是现在时间开始算的，第二个表就是1970年开始的，代码如下：
-第一个表的：  Date curTime = new Date();
-             SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy-MM-dd hh:mm:ss&quot;);
-             String regtime = sdf.format(curTime);
-
-第二个表的：Date time=new Date(1);
-           SimpleDateFormat sdf=new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;);//设置成mysql能识别的datetime形式
-           String time1=sdf.format(time);
-</code></pre><p>   这两个时间的区别就是第二个Date：<br>     public Date(long date)<br>     Constructs a Date object using the given millisecondstime value. If the given milliseconds value contains timeinformation, the driver will set the time components to thetime in the default time zone (the time zone of the Java virtualmachine running the application) that corresponds to zero GMT.<br>      Parameters:date - milliseconds since January 1, 1970, 00:00:00 GMT notto exceed the milliseconds representation for the year 8099.A negative number indicates the number of millisecondsbefore January 1, 1970, 00:00:00 GMT.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1680,7 +1683,7 @@ mybatis基于注解的入门案例：
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
