@@ -250,6 +250,380 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/11/21/Arya18/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiao zhongying">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images\01.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Arya">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/21/Arya18/" itemprop="url">Arya18（BootStrap框架的学习）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-21T17:38:37+08:00">
+                2019-11-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="BootStrap框架的简介"><a href="#BootStrap框架的简介" class="headerlink" title="BootStrap框架的简介"></a>BootStrap框架的简介</h1><p>  Bootstrap是一组用于网站和网络应用程序开发的开源前端（所谓“前端”，指的是展现给最终用户的界面。与之对应的“后端”是在服务器上面运行的代码）框架，包括HTML、CSS及JavaScript的框架，提供字体排印、窗体、按钮、导航及其他各种组件及Javascript扩展，旨在使动态网页和Web应用的开发更加容易。</p>
+<h1 id="Bootstrap-下拉菜单（Dropdowns）"><a href="#Bootstrap-下拉菜单（Dropdowns）" class="headerlink" title="Bootstrap 下拉菜单（Dropdowns）"></a>Bootstrap 下拉菜单（Dropdowns）</h1><p>   如需使用下拉菜单，只需要在 class .dropdown 内加上下拉菜单即可。<br>   eg:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+<pre><code>&lt;div class=&quot;dropdown&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn dropdown-toggle&quot; id=&quot;dropdownMenu1&quot; data-toggle=&quot;dropdown&quot;&gt;主题
+    &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot; aria-labelledby=&quot;dropdownMenu1&quot;&gt;
+    &lt;li role=&quot;presentation&quot;&gt;
+        &lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Java&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;
+        &lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;数据挖掘&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;
+        &lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;数据通信/网络&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li role=&quot;presentation&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;
+        &lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;分离的链接&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</code></pre><blockquote>
+</blockquote>
+<p>   <img src="/image/14.PNG" alt="Alt text"></p>
+</blockquote>
+</blockquote>
+<h1 id="Bootstrap-下拉菜单（Dropdowns）添加下拉菜单"><a href="#Bootstrap-下拉菜单（Dropdowns）添加下拉菜单" class="headerlink" title="Bootstrap 下拉菜单（Dropdowns）添加下拉菜单"></a>Bootstrap 下拉菜单（Dropdowns）添加下拉菜单</h1><p>   如需向按钮添加下拉菜单，只需要简单地在在一个 .btn-group 中放置按钮和下拉菜单即可。您也可以使用 <span class="caret"></span> 来指示按钮作为下拉菜单。</p>
+<blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+<pre><code>&lt;div class=&quot;btn-group&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;默认
+    &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;功能&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;另一个功能&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;其他&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;分离的链接&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;原始
+    &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;功能&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;另一个功能&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;其他&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;分离的链接&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</code></pre><blockquote>
+</blockquote>
+<p>   <img src="/image/15.PNG" alt="Alt text"></p>
+</blockquote>
+</blockquote>
+<h1 id="Bootstrap-输入框组"><a href="#Bootstrap-输入框组" class="headerlink" title="Bootstrap 输入框组"></a>Bootstrap 输入框组</h1><pre><code>通过向输入域添加前缀和后缀的内容，您可以向用户输入添加公共的元素。例如，您可以添加美元符号，或者在 Twitter 用户名前添加 @，或者应用程序接口所需要的其他公共的元素。
+
+向 .form-control 添加前缀或后缀元素的步骤如下：
+
+把前缀或后缀元素放在一个带有 class .input-group 的 &lt;div&gt; 中。
+接着，在相同的 &lt;div&gt; 内，在 class 为 .input-group-addon 的 &lt;span&gt; 内放置额外的内容。
+把该 &lt;span&gt; 放置在 &lt;input&gt; 元素的前面或者后面。
+为了保持跨浏览器的兼容性，请避免使用 &lt;select&gt; 元素，因为它们在 WebKit 浏览器中不能完全渲染出效果。也不要直接向表单组应用输入框组的 class，输入框组是一个孤立的组件。
+</code></pre><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+<pre><code>&lt;div style=&quot;padding: 100px 100px 10px;&quot;&gt;
+&lt;form class=&quot;bs-example bs-example-form&quot; role=&quot;form&quot;&gt;
+    &lt;div class=&quot;input-group&quot;&gt;
+        &lt;span class=&quot;input-group-addon&quot;&gt;@&lt;/span&gt;
+        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;twitterhandle&quot;&gt;
+    &lt;/div&gt;
+    &lt;br&gt;
+    &lt;div class=&quot;input-group&quot;&gt;
+        &lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+        &lt;span class=&quot;input-group-addon&quot;&gt;.00&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;br&gt;
+    &lt;div class=&quot;input-group&quot;&gt;
+        &lt;span class=&quot;input-group-addon&quot;&gt;$&lt;/span&gt;
+        &lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+        &lt;span class=&quot;input-group-addon&quot;&gt;.00&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+</code></pre><blockquote>
+</blockquote>
+<p> <img src="/image/16.PNG" alt="Alt text"></p>
+</blockquote>
+</blockquote>
+<h1 id="Bootstrap-导航元素"><a href="#Bootstrap-导航元素" class="headerlink" title="Bootstrap 导航元素"></a>Bootstrap 导航元素</h1><blockquote>
+<blockquote>
+</blockquote>
+<p>  Bootstrap 提供的用于定义导航元素的一些选项。它们使用相同的标记和基类 .nav。Bootstrap 也提供了一个用于共享标记和状态的帮助器类。改变修饰的 class，可以在不同的样式间进行切换。</p>
+</blockquote>
+<p>   表格导航或标签<br>   创建一个标签式的导航菜单：</p>
+<p>   以一个带有 class .nav 的无序列表开始。<br>   添加 class .nav-tabs。</p>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+<pre><code>&lt;p&gt;标签式的导航菜单&lt;/p&gt;
+&lt;ul class=&quot;nav nav-tabs&quot;&gt;
+&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;SVN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;iOS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;VB.Net&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Java&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href=&quot;#&quot;&gt;PHP&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><blockquote>
+</blockquote>
+<p>   <img src="/image/17.PNG" alt="Alt text"></p>
+</blockquote>
+</blockquote>
+<p>   如果想要垂直的胶囊式导航菜单则可以在使用 class .nav、.nav-pills 的同时使用 class .nav-stacked，让胶囊垂直堆叠。</p>
+<h2 id="Bootstrap-导航栏"><a href="#Bootstrap-导航栏" class="headerlink" title="Bootstrap 导航栏"></a>Bootstrap 导航栏</h2><blockquote>
+</blockquote>
+<pre><code>Bootstrap 导航栏:导航栏是一个很好的功能，是 Bootstrap 网站的一个突出特点。导航栏在您的应用或网站中作为导航页头的响应式基础组件。导航栏在移动设备的视图中是折叠的，随着可用视口宽度的增加，导航栏也会水平展开。在 Bootstrap 导航栏的核心中，导航栏包括了站点名称和基本的导航定义样式。
+默认的导航栏
+创建一个默认的导航栏的步骤如下：
+向 &lt;nav&gt; 标签添加 class .navbar、.navbar-default。
+向上面的元素添加 role=&quot;navigation&quot;，有助于增加可访问性。
+向 &lt;div&gt; 元素添加一个标题 class .navbar-header，内部包含了带有 class navbar-brand 的 &lt;a&gt; 元素。这会让文本看起来更大一号。
+为了向导航栏添加链接，只需要简单地添加带有 class .nav、.navbar-nav 的无序列表即可。
+为了给导航栏添加响应式特性，您要折叠的内容必须包裹在带有 class .collapse、.navbar-collapse 的 &lt;div&gt; 中。折叠起来的导航栏实际上是一个带有 class .navbar-toggle 及两个 data- 元素的按钮。第一个是 data-toggle，用于告诉 JavaScript 需要对按钮做什么，第二个是 data-target，指示要切换到哪一个元素。三个带有 class .icon-bar 的 &lt;span&gt; 创建所谓的汉堡按钮。这些会切换为 .nav-collapse &lt;div&gt; 中的元素。为了实现以上这些功能，您必须包含 Bootstrap 折叠（Collapse）插件。
+</code></pre><blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+<pre><code>&lt;nav class=&quot;navbar navbar-default&quot; role=&quot;navigation&quot;&gt;
+&lt;div class=&quot;container-fluid&quot;&gt; 
+&lt;div class=&quot;navbar-header&quot;&gt;
+    &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;菜鸟教程&lt;/a&gt;
+&lt;/div&gt;
+&lt;form class=&quot;navbar-form navbar-left&quot; role=&quot;search&quot;&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Search&quot;&gt;
+    &lt;/div&gt;
+    &lt;button type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;提交&lt;/button&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+&lt;/nav&gt;
+</code></pre><blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>  <img src="/image/18.PNG" alt="Alt text"></p>
+<h2 id="面包屑导航（Breadcrumbs）"><a href="#面包屑导航（Breadcrumbs）" class="headerlink" title="面包屑导航（Breadcrumbs）"></a>面包屑导航（Breadcrumbs）</h2><pre><code>是一种基于网站层次信息的显示方式。以博客为例，面包屑导航可以显示发布日期、类别或标签。它们表示当前页面在导航层次结构内的位置。Bootstrap 中的面包屑导航（Breadcrumbs）是一个简单的带有 .breadcrumb class 的无序列表。分隔符会通过 CSS（bootstrap.min.css）中下面所示的 class 自动被添加：
+</code></pre><p>   <img src="/image/19.PNG" alt="Alt text"></p>
+<h1 id="Bootstrap-徽章（Badges）"><a href="#Bootstrap-徽章（Badges）" class="headerlink" title="Bootstrap 徽章（Badges）"></a>Bootstrap 徽章（Badges）</h1><p>   徽章与标签相似，主要的区别在于徽章的边角更加圆滑。<br>   徽章（Badges）主要用于突出显示新的或未读的项。如需使用徽章，只需要把 <span class="badge"> 添加到链接、Bootstrap 导航等这些元素上即可。</span></p>
+<h1 id="Bootstrap-模态框（Modal）插件"><a href="#Bootstrap-模态框（Modal）插件" class="headerlink" title="Bootstrap 模态框（Modal）插件"></a>Bootstrap 模态框（Modal）插件</h1><p>   模态框（Modal）是覆盖在父窗体上的子窗体。通常，目的是显示来自一个单独的源的内容，可以在不离开父窗体的情况下有一些互动。子窗体可提供信息、交互等。您可以切换模态框（Modal）插件的隐藏内容：通过 data 属性：在控制器元素（比如按钮或者链接）上设置属性 data-toggle=”modal”，同时设置 data-target=”#identifier” 或 href=”#identifier” 来指定要切换的特定的模态框（带有 id=”identifier”）。通过 JavaScript：使用这种技术，您可以通过简单的一行 JavaScript 来调用带有 id=”identifier” 的模态框：</p>
+<blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+<pre><code> &lt;h2&gt;创建模态框（Modal）&lt;/h2&gt;
+&lt;!-- 按钮触发模态框 --&gt;
+&lt;button class=&quot;btn btn-primary btn-lg&quot; data-toggle=&quot;modal&quot; data-target=&quot;#myModal&quot;&gt;开始演示模态框&lt;/button&gt;
+&lt;!-- 模态框（Modal） --&gt;
+ &lt;div class=&quot;modal fade&quot; id=&quot;myModal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;myModalLabel&quot; aria-hidden=&quot;true&quot;&gt;
+&lt;div class=&quot;modal-dialog&quot;&gt;
+    &lt;div class=&quot;modal-content&quot;&gt;
+        &lt;div class=&quot;modal-header&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/button&gt;
+            &lt;h4 class=&quot;modal-title&quot; id=&quot;myModalLabel&quot;&gt;模态框（Modal）标题&lt;/h4&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal-body&quot;&gt;在这里添加一些文本&lt;/div&gt;
+        &lt;div class=&quot;modal-footer&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot; data-dismiss=&quot;modal&quot;&gt;关闭&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;提交更改&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- /.modal-content --&gt;
+&lt;/div&gt;&lt;!-- /.modal --&gt;
+&lt;/div&gt;
+</code></pre></blockquote>
+</blockquote>
+<pre><code>代码讲解：
+使用模态窗口，您需要有某种触发器。您可以使用按钮或链接。这里我们使用的是按钮。
+如果您仔细查看上面的代码，您会发现在 &lt;button&gt; 标签中，data-target=&quot;#myModal&quot; 是您想要在页面上加载的模态框的目标。您可以在页面上创建多个模态框，然后为每个模态框创建不同的触发器。现在，很明显，您不能在同一时间加载多个模块，但您可以在页面上创建多个在不同时间进行加载。
+在模态框中需要注意两点：
+第一是 .modal，用来把 &lt;div&gt; 的内容识别为模态框。
+第二是 .fade class。当模态框被切换时，它会引起内容淡入淡出。
+aria-labelledby=&quot;myModalLabel&quot;，该属性引用模态框的标题。
+属性 aria-hidden=&quot;true&quot; 用于保持模态窗口不可见，直到触发器被触发为止（比如点击在相关的按钮上）。
+&lt;div class=&quot;modal-header&quot;&gt;，modal-header 是为模态窗口的头部定义样式的类。
+class=&quot;close&quot;，close 是一个 CSS class，用于为模态窗口的关闭按钮设置样式。
+data-dismiss=&quot;modal&quot;，是一个自定义的 HTML5 data 属性。在这里它被用于关闭模态窗口。
+class=&quot;modal-body&quot;，是 Bootstrap CSS 的一个 CSS class，用于为模态窗口的主体设置样式。
+class=&quot;modal-footer&quot;，是 Bootstrap CSS 的一个 CSS class，用于为模态窗口的底部设置样式。
+data-toggle=&quot;modal&quot;，HTML5 自定义的 data 属性 data-toggle 用于打开模态窗口。
+</code></pre><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h1 id="Bootstrap-滚动监听（Scrollspy）插件"><a href="#Bootstrap-滚动监听（Scrollspy）插件" class="headerlink" title="Bootstrap 滚动监听（Scrollspy）插件"></a>Bootstrap 滚动监听（Scrollspy）插件</h1><pre><code>滚动监听（Scrollspy）插件，即自动更新导航插件，会根据滚动条的位置自动更新对应的导航目标。其基本的实现是随着您的滚动，基于滚动条的位置向导航栏添加 .active class。
+ 用法
+您可以向顶部导航添加滚动监听行为：
+
+ 通过 data 属性：向您想要监听的元素（通常是 body）添加 data-spy=&quot;scroll&quot;。然后添加带有 Bootstrap .nav 组件的父元素的 ID 或 class 的属性 data-target。为了它能正常工作，您必须确保页面主体中有匹配您所要监听链接的 ID 的元素存在。
+</code></pre><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+<pre><code>&lt;body data-spy=&quot;scroll&quot; data-target=&quot;.navbar-example&quot;&gt;
+&lt;div class=&quot;navbar-example&quot;&gt;
+&lt;ul class=&quot;nav nav-tabs&quot;&gt;
+    ...
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+</code></pre></blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+<p>  通过 JavaScript：您可以通过 JavaScript 调用滚动监听，选取要监听的元素，然后调用 .scrollspy() 函数：<br>   $(‘body’).scrollspy({ target: ‘.navbar-example’ })</p>
+</blockquote>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/11/10/Arya17/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -321,7 +695,27 @@
       
         
           
-            <h1 id="窗口类型"><a href="#窗口类型" class="headerlink" title="窗口类型"></a>窗口类型</h1><p>  1、Frame是框架窗体，有边框的，Panel是面板，无边框，一般把几个Panel加到一个Frame上。Sun公司的定义：Frame是带标题和边框的最顶层窗体；Panel是个最简单的容器类，它提供空间让程序放其它组件，包括其它Panel。 添加到容器中的组件放在一个列表中。列表的顺序将定义组件在容器内的正向堆栈顺序。如果将组件添加到容器中时未指定索引，则该索引将被添加到列表尾部（此后它位于堆栈顺序的底部）。<br>  2、1.FlowLayoutpublic FlowLayout(int align,int hgap,int vgap)   创建一个新的流布局管理器，具有指定的对齐方式以及指定的水平和垂直间隙。<br>    2.2.GridLayout<br>      public GridLayout(int rows,<br>                  int cols,<br>                  int hgap,<br>                  int vgap)创建具有指定行数和列数的网格布局。<br>     3.BorderLayout<br>      public BorderLayout(int hgap,<br>                    int vgap)用指定的组件之间的间距构造水平一个边界布局。<br>     4.CardLayout<br>       public CardLayout(int hgap,<br>                  int vgap)创建一个具有指定的水平和垂直间隙的新卡片布局。</p>
+            <h1 id="窗口类型"><a href="#窗口类型" class="headerlink" title="窗口类型"></a>窗口类型</h1><p>  1、<br>  Frame是框架窗体，有边框的，Panel是面板，无边框，一般把几个Panel加到一个Frame上。Sun公司的定义：Frame是带标题和边框的最顶层窗体；Panel是个最简单的容器类，它提供空间让程序放其它组件，包括其它Panel。 添加到容器中的组件放在一个列表中。列表的顺序将定义组件在容器内的正向堆栈顺序。如果将组件添加到容器中时未指定索引，则该索引将被添加到列表尾部（此后它位于堆栈顺序的底部）。</p>
+<p>  2、1.FlowLayoutpublic FlowLayout(int align,int hgap,int vgap)   创建一个新的流布局管理器，具有指定的对齐方式以及指定的水平和垂直间隙。<br>    2.GridLayout</p>
+<blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+<pre><code>public GridLayout(int rows,
+            int cols,
+            int hgap,
+            int vgap)
+</code></pre><blockquote>
+<pre><code>         创建具有指定行数和列数的网格布局。
+3.BorderLayout
+ public BorderLayout(int hgap,
+               int vgap)用指定的组件之间的间距构造水平一个边界布局。
+4.CardLayout
+  public CardLayout(int hgap,
+             int vgap)创建一个具有指定的水平和垂直间隙的新卡片布局。
+</code></pre></blockquote>
+</blockquote>
+</blockquote>
 <p>   3、drawLine(int x1, int y1, int x2, int y2) ： 在此图形上下文的坐标系中，使用当前颜色在点 (x1, y1) 和 (x2, y2) 之间画一条线。<br>   drawRect(int x, int y, int width, int height) ：  绘制指定矩形的边框。<br>   JAVA是以屏幕左上角为原点（0，0）往右X增加，往下Y增加</p>
 <p>   4、DrawString(String, Font, Brush, Single, Single, StringFormat)：使用指定 Brush 的格式化特性，用指定的 Font 和 StringFormat 对象在指定的位置绘制指定的文本字符串。</p>
 <p>   5、fillRect（x,y,w,h）函数的作用是：填充一个矩形区域，x、y为起始坐标（即左上角坐标）,后面两个参数分别为：w、h,是矩形区域的宽和高,这里的20表示填充宽度20像素，15表示填充高度15像素。</p>
@@ -1505,137 +1899,11 @@ mybatis基于注解的入门案例：
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/05/27/Arya08/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xiao zhongying">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images\01.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Arya">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/05/27/Arya08/" itemprop="url">Arya08(方便自己记忆的Github上传项目)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-27T20:21:52+08:00">
-                2019-05-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p> 1 首先创建一个新的存储库，记得勾选下面那个<br> <img src="/image/01.PNG" alt="Alt text"></p>
-<p> 2 右击项目git bash here<br>   然后输入：git clone <a href="https://github.com/little-Arya/little-Arya.github.io.git" target="_blank" rel="noopener">https://github.com/little-Arya/little-Arya.github.io.git</a>(这是你的存储库那儿复制的地址 有一个克隆或下载可得到)<br>   这样在你的项目文件里会多出一个和你的GitHub上创建的项目一样名字的文件<br>   <img src="/image/02.PNG" alt="Alt text"><br>   把项目文件里的其他文件全部复制到那个多出来的文件里 比如我的是TieBa</p>
-<p> 3 然后进入这个TieBa文件：cd TieBa回车</p>
-<p> 4 后输入命令：git add . (注意：add与.之间一有空格) //不但可以跟单一文件，还可以跟通配符，更可以跟目录。一个点就把当前目录下所有未追踪的文件全部add了 </p>
-<p> 5 再输入git commit  -m  “提交信息” （提交的信息是你的项目说明）<br>  例如：<br>　　git commit -m “first commit” //把文件提交到仓库</p>
-<p>  这时你要先全局配置好在git上的用户名和邮箱<br>  <a href="https://little-arya.github.io/2019/04/18/Rewivew01/" target="_blank" rel="noopener">点此可看配置命令</a><br>  后输入此命令，如果之前配置好了则不需要了。</p>
-<p> 6 最后输入：git push -u origin master（此操作目的是把本地仓库push到github上面，此步骤需要你输入登录github上的帐号和密码）<br>   完成后进入GitHub页面刷新即可。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1683,7 +1951,7 @@ mybatis基于注解的入门案例：
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
