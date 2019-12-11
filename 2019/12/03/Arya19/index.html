@@ -86,12 +86,10 @@
 <meta property="og:site_name" content="Arya">
 <meta property="og:description" content="SSM中JSP显示图片问题   因为spingmvc.xml中配置了视图解析器：     &amp;lt;bean id=&amp;quot;internalResourceViewResolver&amp;quot; class=&amp;quot;org.springframework.web.servlet.view.InternalResourceViewResolver&amp;quot;&amp;gt;     &amp;lt;proper">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://arya.com/2019/12/03/Arya19/images/02.jpg">
-<meta property="og:updated_time" content="2019-12-04T14:06:21.343Z">
+<meta property="og:updated_time" content="2019-12-11T08:44:48.084Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Arya19">
 <meta name="twitter:description" content="SSM中JSP显示图片问题   因为spingmvc.xml中配置了视图解析器：     &amp;lt;bean id=&amp;quot;internalResourceViewResolver&amp;quot; class=&amp;quot;org.springframework.web.servlet.view.InternalResourceViewResolver&amp;quot;&amp;gt;     &amp;lt;proper">
-<meta name="twitter:image" content="http://arya.com/2019/12/03/Arya19/images/02.jpg">
 
 
 
@@ -335,7 +333,17 @@
 </blockquote>
 </blockquote>
 </blockquote>
-<p>   所以存放图片的images文件夹必须放在webapp下，跟webinfo同级。在<img src="images/02.jpg">显示即可。</p>
+<p>   所以存放图片的images文件夹必须放在webapp下，跟webinfo同级。这样写：</p>
+<blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+<pre><code>&lt;img src=&quot;images/02.jpg&quot;/&gt; 
+</code></pre><blockquote>
+</blockquote>
+<p>   即可显示。</p>
+</blockquote>
+</blockquote>
 <h1 id="SSM中页面之间的跳转需要写方法实现"><a href="#SSM中页面之间的跳转需要写方法实现" class="headerlink" title="SSM中页面之间的跳转需要写方法实现"></a>SSM中页面之间的跳转需要写方法实现</h1><p>   因为是SpringMVC中视图解析器的原因或者是整合框架了，不好直接跳转<br>   所以这样写：</p>
 <blockquote>
 <blockquote>
@@ -351,6 +359,12 @@ public void Register(HttpServletRequest request, HttpServletResponse response, O
 </blockquote>
 </blockquote>
 <p>   另外要跳转到根目录下index.jsp下时要这样写（随便改一下就跳不过去了）：<br>   mv.setViewName(“redirect:/index.jsp”);</p>
+<h1 id="enctype-”multipart-form-data”"><a href="#enctype-”multipart-form-data”" class="headerlink" title="enctype=”multipart/form-data”"></a>enctype=”multipart/form-data”</h1><p>  放在form表单语句里搞得我保存数据到数据库老是出错。正常存进去就说name cannot be null,要是把数据库的字段设置不是默认为空就导致存进去全是空值。<br>  multipart/form-data —制定传输数据的特殊类型,上传的非文本的内容，比如图片或是是mp3。表单中enctype=”multipart/form-data”的意思，是设置表单的MIME编码。默认情况，这个编码格式是application/x-www-form-urlencoded，不能用于文件上传；只有使用了multipart/form-data，才能完整的传递文件数据，进行下面的操作.</p>
+<h1 id="＜-page-isELIgnored＝”true-false”-＞如果设定为真，那么JSP中的表达式被当成字符串处理，我们通过字面意思理解一下：是否忽略el表达式，如果为true就是忽略el表达式，就是当做字符串来处理；反之，就是按el表达式来。"><a href="#＜-page-isELIgnored＝”true-false”-＞如果设定为真，那么JSP中的表达式被当成字符串处理，我们通过字面意思理解一下：是否忽略el表达式，如果为true就是忽略el表达式，就是当做字符串来处理；反之，就是按el表达式来。" class="headerlink" title="＜%@ page isELIgnored＝”true|false”%＞如果设定为真，那么JSP中的表达式被当成字符串处理，我们通过字面意思理解一下：是否忽略el表达式，如果为true就是忽略el表达式，就是当做字符串来处理；反之，就是按el表达式来。"></a>＜%@ page isELIgnored＝”true|false”%＞如果设定为真，那么JSP中的表达式被当成字符串处理，我们通过字面意思理解一下：是否忽略el表达式，如果为true就是忽略el表达式，就是当做字符串来处理；反之，就是按el表达式来。</h1><p>  反正要用el表达式必须在文件头加上isELIgnored=”false”。切记！！！！</p>
+<h1 id="el表达式"><a href="#el表达式" class="headerlink" title="el表达式"></a>el表达式</h1><pre><code>&gt;&gt;&gt;
+EL表达式是一种JSP技术，能够代替JSP中原本要用Java语言进行显示的语句，使得代码更容易编写与维护。最基本的语法是${express}。${name}      &lt;!-- 类比于&lt;%=pageContext.findAttribute(&quot;name&quot;) %&gt; --&gt;
+&gt;&gt;&gt;
+</code></pre><h1 id="model-addAttribute-“list”-list-用法"><a href="#model-addAttribute-“list”-list-用法" class="headerlink" title="model.addAttribute(“list”,list);用法"></a>model.addAttribute(“list”,list);用法</h1><p>   往前台传数据，可以传对象，可以传List，通过el表达式 ${}可以获取到，类似于request.setAttribute(“sts”,sts)效果一样。</p>
 
       
     </div>
@@ -576,7 +590,7 @@ public void Register(HttpServletRequest request, HttpServletResponse response, O
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SSM中JSP显示图片问题"><span class="nav-number">1.</span> <span class="nav-text">SSM中JSP显示图片问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SSM中页面之间的跳转需要写方法实现"><span class="nav-number">2.</span> <span class="nav-text">SSM中页面之间的跳转需要写方法实现</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SSM中JSP显示图片问题"><span class="nav-number">1.</span> <span class="nav-text">SSM中JSP显示图片问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SSM中页面之间的跳转需要写方法实现"><span class="nav-number">2.</span> <span class="nav-text">SSM中页面之间的跳转需要写方法实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#enctype-”multipart-form-data”"><span class="nav-number">3.</span> <span class="nav-text">enctype=”multipart/form-data”</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#＜-page-isELIgnored＝”true-false”-＞如果设定为真，那么JSP中的表达式被当成字符串处理，我们通过字面意思理解一下：是否忽略el表达式，如果为true就是忽略el表达式，就是当做字符串来处理；反之，就是按el表达式来。"><span class="nav-number">4.</span> <span class="nav-text">＜%@ page isELIgnored＝”true|false”%＞如果设定为真，那么JSP中的表达式被当成字符串处理，我们通过字面意思理解一下：是否忽略el表达式，如果为true就是忽略el表达式，就是当做字符串来处理；反之，就是按el表达式来。</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#el表达式"><span class="nav-number">5.</span> <span class="nav-text">el表达式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#model-addAttribute-“list”-list-用法"><span class="nav-number">6.</span> <span class="nav-text">model.addAttribute(“list”,list);用法</span></a></li></ol></div>
             
 
           </div>
