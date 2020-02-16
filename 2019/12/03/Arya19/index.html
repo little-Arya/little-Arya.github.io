@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Arya">
 <meta property="og:description" content="SSM中JSP显示图片问题   因为spingmvc.xml中配置了视图解析器：     &amp;lt;bean id=&amp;quot;internalResourceViewResolver&amp;quot; class=&amp;quot;org.springframework.web.servlet.view.InternalResourceViewResolver&amp;quot;&amp;gt;     &amp;lt;proper">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-11T08:44:48.084Z">
+<meta property="og:updated_time" content="2019-12-20T14:12:45.492Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Arya19">
 <meta name="twitter:description" content="SSM中JSP显示图片问题   因为spingmvc.xml中配置了视图解析器：     &amp;lt;bean id=&amp;quot;internalResourceViewResolver&amp;quot; class=&amp;quot;org.springframework.web.servlet.view.InternalResourceViewResolver&amp;quot;&amp;gt;     &amp;lt;proper">
@@ -360,7 +360,7 @@ public void Register(HttpServletRequest request, HttpServletResponse response, O
 </blockquote>
 <p>   另外要跳转到根目录下index.jsp下时要这样写（随便改一下就跳不过去了）：<br>   mv.setViewName(“redirect:/index.jsp”);</p>
 <h1 id="enctype-”multipart-form-data”"><a href="#enctype-”multipart-form-data”" class="headerlink" title="enctype=”multipart/form-data”"></a>enctype=”multipart/form-data”</h1><p>  放在form表单语句里搞得我保存数据到数据库老是出错。正常存进去就说name cannot be null,要是把数据库的字段设置不是默认为空就导致存进去全是空值。<br>  multipart/form-data —制定传输数据的特殊类型,上传的非文本的内容，比如图片或是是mp3。表单中enctype=”multipart/form-data”的意思，是设置表单的MIME编码。默认情况，这个编码格式是application/x-www-form-urlencoded，不能用于文件上传；只有使用了multipart/form-data，才能完整的传递文件数据，进行下面的操作.</p>
-<h1 id="＜-page-isELIgnored＝”true-false”-＞如果设定为真，那么JSP中的表达式被当成字符串处理，我们通过字面意思理解一下：是否忽略el表达式，如果为true就是忽略el表达式，就是当做字符串来处理；反之，就是按el表达式来。"><a href="#＜-page-isELIgnored＝”true-false”-＞如果设定为真，那么JSP中的表达式被当成字符串处理，我们通过字面意思理解一下：是否忽略el表达式，如果为true就是忽略el表达式，就是当做字符串来处理；反之，就是按el表达式来。" class="headerlink" title="＜%@ page isELIgnored＝”true|false”%＞如果设定为真，那么JSP中的表达式被当成字符串处理，我们通过字面意思理解一下：是否忽略el表达式，如果为true就是忽略el表达式，就是当做字符串来处理；反之，就是按el表达式来。"></a>＜%@ page isELIgnored＝”true|false”%＞如果设定为真，那么JSP中的表达式被当成字符串处理，我们通过字面意思理解一下：是否忽略el表达式，如果为true就是忽略el表达式，就是当做字符串来处理；反之，就是按el表达式来。</h1><p>  反正要用el表达式必须在文件头加上isELIgnored=”false”。切记！！！！</p>
+<h1 id="＜-page-isELIgnored＝”true-false”-＞如果设定为真，那么JSP中的表达式被当成字符串处理，我们通过字面意思理解一下：是否忽略el表达式，如果为true就是忽略el表达式，就是当做字符串来处理；反之，就是按el表达式来。"><a href="#＜-page-isELIgnored＝”true-false”-＞如果设定为真，那么JSP中的表达式被当成字符串处理，我们通过字面意思理解一下：是否忽略el表达式，如果为true就是忽略el表达式，就是当做字符串来处理；反之，就是按el表达式来。" class="headerlink" title="＜%@ page isELIgnored＝”true|false”%＞如果设定为真，那么JSP中的表达式被当成字符串处理，我们通过字面意思理解一下：是否忽略el表达式，如果为true就是忽略el表达式，就是当做字符串来处理；反之，就是按el表达式来。"></a>＜%@ page isELIgnored＝”true|false”%＞如果设定为真，那么JSP中的表达式被当成字符串处理，我们通过字面意思理解一下：是否忽略el表达式，如果为true就是忽略el表达式，就是当做字符串来处理；反之，就是按el表达式来。</h1><p>  反正要用el表达式必须在文件头加上isELIgnored=”false”。切记！！！！el表达式的字段还不能是大写字母开头，比如${book.BorrowID}是不行的，得是${book.borrowID}才可以！！</p>
 <h1 id="el表达式"><a href="#el表达式" class="headerlink" title="el表达式"></a>el表达式</h1><pre><code>&gt;&gt;&gt;
 EL表达式是一种JSP技术，能够代替JSP中原本要用Java语言进行显示的语句，使得代码更容易编写与维护。最基本的语法是${express}。${name}      &lt;!-- 类比于&lt;%=pageContext.findAttribute(&quot;name&quot;) %&gt; --&gt;
 &gt;&gt;&gt;
@@ -427,6 +427,10 @@ EL表达式是一种JSP技术，能够代替JSP中原本要用Java语言进行�
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/02/16/Arya20/" rel="prev" title="Arya20（学习Springboot）">
+                Arya20（学习Springboot） <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -505,7 +509,7 @@ EL表达式是一种JSP技术，能够代替JSP中原本要用Java语言进行�
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -610,7 +614,7 @@ EL表达式是一种JSP技术，能够代替JSP中原本要用Java语言进行�
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

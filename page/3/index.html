@@ -250,6 +250,181 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/04/13/Arya02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiao zhongying">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images\01.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Arya">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/13/Arya02/" itemprop="url">Arya02（数据库语言）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-13T20:34:45+08:00">
+                2019-04-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Arya02"><a href="#Arya02" class="headerlink" title="Arya02"></a>Arya02</h1><h2 id="第二篇文章哦"><a href="#第二篇文章哦" class="headerlink" title="第二篇文章哦"></a>第二篇文章哦</h2><h3 id="对数据库语言的了解"><a href="#对数据库语言的了解" class="headerlink" title="对数据库语言的了解"></a>对数据库语言的了解</h3><ul>
+<li><p>MySQL和SQL区别<br>　一开始以为MySQL和SQL是同一个东西，其实不然。通过百度，我了解到：<br>　　　　　对于程序开发人员而言，目前使用最流行的两种后台数据库即为MySQL and SQLServer。这两者最基本的相似之处在于数据存储和属于查询系统。你可以使用SQL来访问这两种数据库的数据，因为它们都支持ANSI-SQL。还有，这两种数据库系统都支持二进制关键词和关键索引，这就大大地加快了查询速度。同时，二者也都提供支持XML的各种格式。除了在显而易见的软件价格上的区别之外，这两个产品还有什么明显的区别吗？在这二者之间你是如何选择的？让我们看看这两个产品的主要的不同之处，包括发行费用，性能以及它们的安全性。</p>
+<p>根本的区别是它们遵循的基本原则</p>
+</li>
+</ul>
+<p>二者所遵循的基本原则是它们的主要区别：开放vs保守。SQL服务器的狭隘的，保守的存储引擎与MySQL服务器的可扩展，开放的存储引擎绝然不同。虽然你可以使用SQL服务器的Sybase引擎，但MySQL能够提供更多种的选择，如MyISAM,Heap, InnoDB, and BerkeleyDB。MySQL不完全支持陌生的关键词，所以它比SQL服务器要少一些相关的数据库。同时，MySQL也缺乏一些存储程序的功能，比如MyISAM引擎联支持交换功能。</p>
+<p>　　　两者优缺点分析：<br>  　1　优点分析：MYSQL短小精悍，容易上手，操作简单，免费供用的。相对其它数据库有特色又实用的语法多一些。SQL怎么也算是大型数据库，稳定，能做一般大系统的数据仓库，运行速度明显比MYSQL快N多（海量数据下这个优势显而易见）。</p>
+<pre><code>2　缺点分析：MYSQL难担当大系统的数据仓库，运行速度慢，不够稳定，有掉线的情况。SQLSERVER价格贵（当然没说5元盗版），使用起来比MYSQL要难一些，毕竟东西大了说道多点。
+</code></pre><ul>
+<li><p>SQL语句的常用语法（因为不懂，误打误撞学了这个发现还挺好，但还是要学常用的MYSQL）<br>　  １　什么是 SQL？<br>　　　SQL 指结构化查询语言<br>　　　SQL 使我们有能力访问数据库<br>　　　SQL 是一种 ANSI 的标准计算机语言</p>
+<p> 2   SQL (结构化查询语言)是用于执行查询的语法。但是 SQL 语言也包含用于更新、插入和删除记录的语法。</p>
+<pre><code>  查询和更新指令构成了 SQL 的 DML 部分：
+  SELECT - 从数据库表中获取数据
+  UPDATE - 更新数据库表中的数据
+  DELETE - 从数据库表中删除数据
+  INSERT INTO - 向数据库表中插入数据
+SQL 的数据定义语言 (DDL) 部分使我们有能力创建或删除表格。我们也可以定义索引（键），规定表之间的链接，以及施加表间的约束。
+ SQL 中最重要的 DDL 语句:
+  CREATE DATABASE - 创建新数据库
+  ALTER DATABASE - 修改数据库
+  CREATE TABLE - 创建新表
+  ALTER TABLE - 变更（改变）数据库表
+  DROP TABLE - 删除表
+  CREATE INDEX - 创建索引（搜索键）
+  DROP INDEX - 删除索引
+</code></pre><p> 3 </p>
+<pre><code>a   SQL SELECT 语法：SELECT 列名称 FROM 表名称
+  以及：
+ SELECT * FROM 表名称 //表示选取表的所有列
+ //注释：SQL 语句对大小写不敏感。SELECT 等效于 select。
+
+b  在表中，可能会包含重复值。这并不成问题,不过,有时您也许希望仅仅列出不同（distinct）的值。
+ 关键词 DISTINCT 用于返回唯一不同的值。
+ 语法：SELECT DISTINCT 列名称 FROM 表名称  //把你想要的某一列专门挑出来
+
+c  如需有条件地从表中选取数据，可将 WHERE 子句添加到 SELECT 语句。
+ 语法
+   SELECT 列名称 FROM 表名称 WHERE 列 运算符 值
+
+d  AND 和 OR 可在 WHERE 子语句中把两个或多个条件结合起来。
+ 如果第一个条件和第二个条件都成立，则 AND 运算符显示一条记录。
+ 如果第一个条件和第二个条件中只要有一个成立，则 OR 运算符显示一条记录。
+
+e   INSERT INTO 语句用于向表格中插入新的行。
+ 语法:INSERT INTO 表名称 VALUES (值1, 值2,....)
+   我们也可以指定所要插入数据的列：
+    INSERT INTO table_name (列1, 列2,...) VALUES (值1, 值2,....)
+
+f  Update 语句用于修改表中的数据。
+</code></pre><p>  语法：</p>
+<pre><code>    UPDATE 表名称 SET 列名称 = 新值 WHERE 列名称 = 某值
+
+g   DELETE 语句用于删除表中的行。
+</code></pre><p>  语法:   DELETE FROM 表名称 WHERE 列名称 = 值</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/03/24/Arya01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -646,7 +821,7 @@ uppercase 和 lowercase 将文本转换为全大写和全小写字符。
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -735,7 +910,7 @@ uppercase 和 lowercase 将文本转换为全大写和全小写字符。
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
