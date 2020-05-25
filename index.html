@@ -250,6 +250,153 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Arya.com/2020/05/25/Arya23/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiao zhongying">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images\01.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Arya">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/05/25/Arya23/" itemprop="url">Arya23(学习echarts)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-25T11:15:09+08:00">
+                2020-05-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Echarts介绍"><a href="#Echarts介绍" class="headerlink" title="Echarts介绍"></a>Echarts介绍</h1><p>  ECharts，一个使用 JavaScript 实现的开源可视化库，可以流畅的运行在 PC 和移动设备上，兼容当前绝大部分浏览器（IE8/9/10/11，Chrome，Firefox，Safari等），底层依赖矢量图形库 ZRender，提供直观，交互丰富，可高度个性化定制的数据可视化图表。</p>
+<p>  百度出品的一个开源 Javascript 数据可视化库</p>
+<p>  可视化面板：应对现在数据可视化的趋势，越来越多企业需要在很多场景(营销数据，生产数据，用户数据)下使用，可视化图表来展示体现数据，让数据更加直观，数据特点更加突出。</p>
+<p>  官网地址：<a href="https://www.echartsjs.com/zh/index.html" target="_blank" rel="noopener">https://www.echartsjs.com/zh/index.html</a></p>
+<h1 id="使用Echarts"><a href="#使用Echarts" class="headerlink" title="使用Echarts"></a>使用Echarts</h1><ol>
+<li>引入echarts 插件文件到html页面中</li>
+<li><p>准备一个具备大小的DOM容器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;main&quot; style=&quot;width: 600px;height:400px;&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>初始化echarts实例对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var myChart = echarts.init(document.getElementById(&apos;main&apos;));</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>指定配置项和数据(option)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var option = &#123;</span><br><span class="line">  xAxis: &#123;</span><br><span class="line">      type: &apos;category&apos;,</span><br><span class="line">      data: [&apos;Mon&apos;, &apos;Tue&apos;, &apos;Wed&apos;, &apos;Thu&apos;, &apos;Fri&apos;, &apos;Sat&apos;, &apos;Sun&apos;]</span><br><span class="line">  &#125;,</span><br><span class="line">  yAxis: &#123;</span><br><span class="line">      type: &apos;value&apos;</span><br><span class="line">  &#125;,</span><br><span class="line">  series: [&#123;</span><br><span class="line">      data: [820, 932, 901, 934, 1290, 1330, 1320],</span><br><span class="line">      type: &apos;line&apos;</span><br><span class="line">  &#125;]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将配置项设置给echarts实例对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">myChart.setOption(option);</span><br></pre></td></tr></table></figure>
+<h1 id="Echarts配置"><a href="#Echarts配置" class="headerlink" title="Echarts配置"></a>Echarts配置</h1><p>需要了解的主要配置：series、xAxis、yAxis、grid、tooltip、title、legend、color</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">series：</span><br><span class="line">  系列列表。每个系列通过 `type` 决定自己的图表类型</span><br><span class="line">  大白话：图标数据，指定什么类型的图标，可以多个图表重叠。</span><br><span class="line">xAxis：直角坐标系 grid 中的 x 轴</span><br><span class="line">boundaryGap: 坐标轴两边留白策略 true，这时候刻度只是作为分隔线，</span><br><span class="line">标签和数据点都会在两个刻度之间的带(band)中间</span><br><span class="line"> yAxis：直角坐标系 grid 中的 y 轴</span><br><span class="line"> grid：直角坐标系内绘图网格。 </span><br><span class="line"> title：标题组件</span><br><span class="line"> tooltip：提示框组件</span><br><span class="line"> legend：图例组件</span><br><span class="line"> color：调色盘颜色列表</span><br><span class="line"> 数据堆叠，同个类目轴上系列配置相同的`stack`</span><br><span class="line"> 值后 后一个系列的值会在前一个系列的值上相加。</span><br></pre></td></tr></table></figure>
+<p>案例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">  option = &#123;</span><br><span class="line">    // color设置我们线条的颜色 注意后面是个数组</span><br><span class="line">    color: [&apos;pink&apos;, &apos;red&apos;, &apos;green&apos;, &apos;skyblue&apos;],</span><br><span class="line">    // 设置图表的标题</span><br><span class="line">    title: &#123;</span><br><span class="line">        text: &apos;折线图堆叠123&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    // 图表的提示框组件 </span><br><span class="line">    tooltip: &#123;</span><br><span class="line">        // 触发方式</span><br><span class="line">        trigger: &apos;axis&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    // 图例组件</span><br><span class="line">    legend: &#123;</span><br><span class="line">       // series里面有了 name值则 legend里面的data可以删掉</span><br><span class="line">    &#125;,</span><br><span class="line">    // 网格配置  grid可以控制线形图 柱状图 图表大小</span><br><span class="line">    grid: &#123;</span><br><span class="line">        left: &apos;3%&apos;,</span><br><span class="line">        right: &apos;4%&apos;,</span><br><span class="line">        bottom: &apos;3%&apos;,</span><br><span class="line">        // 是否显示刻度标签 如果是true 就显示 否则反之</span><br><span class="line">        containLabel: true</span><br><span class="line">    &#125;,</span><br><span class="line">    // 工具箱组件  可以另存为图片等功能</span><br><span class="line">    toolbox: &#123;</span><br><span class="line">        feature: &#123;</span><br><span class="line">            saveAsImage: &#123;&#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    // 设置x轴的相关配置</span><br><span class="line">    xAxis: &#123;</span><br><span class="line">        type: &apos;category&apos;,</span><br><span class="line">        // 是否让我们的线条和坐标轴有缝隙</span><br><span class="line">        boundaryGap: false,</span><br><span class="line">        data: [&apos;星期一&apos;, &apos;周二&apos;, &apos;周三&apos;, &apos;周四&apos;, &apos;周五&apos;, &apos;周六&apos;, &apos;周日&apos;]</span><br><span class="line">    &#125;,</span><br><span class="line">     // 设置y轴的相关配置</span><br><span class="line">    yAxis: &#123;</span><br><span class="line">        type: &apos;value&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    // 系列图表配置 它决定着显示那种类型的图表</span><br><span class="line">    series: [</span><br><span class="line">        &#123;</span><br><span class="line">            name: &apos;邮件营销&apos;,</span><br><span class="line">            type: &apos;line&apos;,</span><br><span class="line">           </span><br><span class="line">            data: [120, 132, 101, 134, 90, 230, 210]</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: &apos;联盟广告&apos;,</span><br><span class="line">            type: &apos;line&apos;,</span><br><span class="line"></span><br><span class="line">            data: [220, 182, 191, 234, 290, 330, 310]</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: &apos;视频广告&apos;,</span><br><span class="line">            type: &apos;line&apos;,</span><br><span class="line">          </span><br><span class="line">            data: [150, 232, 201, 154, 190, 330, 410]</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: &apos;直接访问&apos;,</span><br><span class="line">            type: &apos;line&apos;,</span><br><span class="line">          </span><br><span class="line">            data: [320, 332, 301, 334, 390, 330, 320]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>1、 防止缩放的时候，引导线过长。引导线略短些   (series对象里面的  labelLine  对象设置  )<br>连接图表 6 px<br>连接文字 8 px</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">    // 文字调整</span><br><span class="line">    label:&#123;</span><br><span class="line">      fontSize: 10</span><br><span class="line">    &#125;,</span><br><span class="line">    // 引导线调整</span><br><span class="line">    labelLine: &#123;</span><br><span class="line">     // 连接扇形图线长</span><br><span class="line">      length: 6,</span><br><span class="line">      // 连接文字线长</span><br><span class="line">      length2: 8</span><br><span class="line">    &#125; </span><br><span class="line">  &#125;</span><br><span class="line">],</span><br></pre></td></tr></table></figure>
+<p>2、浏览器缩放的时候，图表跟着自动适配。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 监听浏览器缩放，图表对象调用缩放resize函数</span><br><span class="line">window.addEventListener(&quot;resize&quot;, function() &#123;</span><br><span class="line">    myChart.resize();</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+<h1 id="社区介绍"><a href="#社区介绍" class="headerlink" title="社区介绍"></a>社区介绍</h1><p><a href="https://gallery.echartsjs.com/explore.html#sort=rank~timeframe=all~author=all" target="_blank" rel="noopener">社区</a>就是一些，活跃的echart使用者，交流和贡献定制好的图表的地方。在这里可以找到一些基于echart的高度定制好的图表，相当于基于jquery开发的插件，这里是基于echarts开发的第三方的图表。</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://Arya.com/2020/05/25/Arya22/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2058,156 +2205,6 @@ mybatis基于注解的入门案例：
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/09/21/Arya13/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xiao zhongying">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images\01.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Arya">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/21/Arya13/" itemprop="url">Arya13（SSM框架的第一步--Spring的学习）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-21T15:35:44+08:00">
-                2019-09-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Spring是什么"><a href="#Spring是什么" class="headerlink" title="Spring是什么"></a>Spring是什么</h1><p>  Spring是分层的 Java SE/EE应用 full-stack 轻量级开源框架，以 IoC（Inverse Of Control： 反转控制）和 AOP（Aspect Oriented Programming：面向切面编程）为内核，提供了展现层 Spring MVC 和持久层 Spring JDBC 以及业务层事务管理等众多的企业级应用技术，还能整合开源世界众多 著名的第三方框架和类库，逐渐成为使用最多的Java EE 企业应用开源框架。 </p>
-<h2 id="Spring的发展历程及优势"><a href="#Spring的发展历程及优势" class="headerlink" title="Spring的发展历程及优势"></a>Spring的发展历程及优势</h2><p>   1997 年 IBM提出了EJB 的思想<br>   1998 年，SUN制定开发标准规范 EJB1.0<br>   1999 年，EJB1.1 发布<br>   2001 年，EJB2.0 发布<br>   2003 年，EJB2.1 发布<br>   2006 年，EJB3.0 发布   Rod Johnson（spring之父）<br>              Expert One-to-One J2EE Design and Development(2002)    阐述了 J2EE 使用EJB 开发设计的优点及解决方案    Expert One-to-One J2EE Development without EJB(2004)    阐述了 J2EE 开发不使用 EJB的解决方式（Spring 雏形）<br>   2017 年 9 月份发布了 spring 的最新版本 spring 5.0 通用版（GA） </p>
-<p>   优势：<br>   方便解耦，简化开发。 通过 Spring提供的 IoC容器，可以将对象间的依赖关系交由 Spring进行控制，避免硬编码所造 成的过度程序耦合。用户也不必再为单例模式类、属性文件解析等这些很底层的需求编写代码，可 以更专注于上层的应用。 </p>
-<p>   AOP编程的支持  通过 Spring的 AOP 功能，方便进行面向切面的编程，许多不容易用传统OOP 实现的功能可以通过 AOP 轻松应付。</p>
-<p>   声明式事务的支持  可以将我们从单调烦闷的事务管理代码中解脱出来，通过声明式方式灵活的进行事务的管理， 提高开发效率和质量。 </p>
-<p>   方便程序的测试  可以用非容器依赖的编程方式进行几乎所有的测试工作，测试不再是昂贵的操作，而是随手可 做的事情。</p>
-<p>   方便集成各种优秀框架  Spring可以降低各种框架的使用难度，提供了对各种优秀框架（Struts、Hibernate、Hessian、Quartz 等）的直接支持。 降低 JavaEE API的使用难度  Spring对 JavaEE API（如 JDBC、JavaMail、远程调用等）进行了薄薄的封装层，使这些 API 的 使用难度大为降低。 </p>
-<p>   Java源码是经典学习范例  Spring的源代码设计精妙、结构清晰、匠心独用，处处体现着大师对Java 设计模式灵活运用以 及对 Java技术的高深造诣。它的源代码无意是 Java 技术的最佳实践的范例。 </p>
-<h2 id="IOC的概念"><a href="#IOC的概念" class="headerlink" title="IOC的概念"></a>IOC的概念</h2><p>   控制反转（Inversion of control）把创建对象的权利交给框架，是框架的重要特征。它包括依赖注入和依赖查找。</p>
-<h3 id="程序的耦合"><a href="#程序的耦合" class="headerlink" title="程序的耦合"></a>程序的耦合</h3><p>   耦合性(Coupling)，也叫耦合度，是对模块间关联程度的度量。耦合的强弱取决于模块间接口的复杂性、调 用模块的方式以及通过界面传送数据的多少。模块间的耦合度是指模块之间的依赖关系，包括控制关系、调用关系、数据传递关系。模块间联系越多，其耦合性越强，同时表明其独立性越差( 降低耦合性，可以提高其独立 性)。耦合性存在于各个领域，而非软件设计中独有的，但是我们只讨论软件工程中的耦合。 在软件工程中，耦合指的就是就是对象之间的依赖性。对象之间的耦合越高，维护成本越高。因此对象的设计应使类和构件之间的耦合最小。软件设计中通常用耦合度和内聚度作为衡量模块独立程度的标准。划分模块的一个 准则就是高内聚低耦合。</p>
-<h3 id="工厂模式解耦"><a href="#工厂模式解耦" class="headerlink" title="工厂模式解耦"></a>工厂模式解耦</h3><p>   在实际开发中我们可以把三层的对象都使用配置文件配置起来，当启动服务器应用加载的时候，让一个类中的方法通过读取配置文件，把这些对象创建出来并存起来。在接下来的使用的时候，直接拿过来用就好了。 那么，这个读取配置文件，创建和获取三层对象的类就是工厂。 </p>
-<h3 id="IOC中的标签"><a href="#IOC中的标签" class="headerlink" title="IOC中的标签"></a>IOC中的标签</h3><p>   一、bean标签<br>   作用：  用于配置对象让 spring 来创建的。  默认情况下它调用的是类中的无参构造函数。如果没有无参构造函数则不能创建成功。 属性：<br>   id：给对象在容器中提供一个唯一标识。用于获取对象。  class：指定类的全限定类名。用于反射创建对象。默认情况下调用无参构造函数。<br>   scope：指定对象的作用范围。   </p>
-<pre><code>* singleton :默认值，单例的.   
-* prototype :多例的.  
-* request :WEB 项目中,Spring 创建一个 Bean 的对象,将对象存入到 request 域中. 
-* session :WEB 项目中,Spring 创建一个 Bean 的对象,将对象存入到 session 域中.  
-* global session :WEB 项目中,应用在 Portlet 环境.如果没有 Portlet 环境那么 globalSession 相当于 session. 
-</code></pre><p>   init-method：指定类中的初始化方法名称。<br>   destroy-method：指定类中销毁方法名称。 </p>
-<p>   bean 的作用范围和生命周期 ：<br>   单例对象：scope=”singleton”   一个应用只有一个对象的实例。它的作用范围就是整个引用。<br>   生命周期：    对象出生：当应用加载，创建容器时，对象就被创建了。<br>   对象活着：只要容器在，对象一直活着。<br>   对象死亡：当应用卸载，销毁容器时，对象就被销毁了。<br>   多例对象：scope=”prototype”   每次访问对象时，都会重新创建对象实例。<br>   生命周期：<br>     对象出生：当使用对象时，创建新的对象实例。<br>     对象活着：只要对象在使用中，就一直活着。<br>     对象死亡：当对象长时间不用时，被 java 的垃圾回收器回收了。 </p>
-<p>   实例化Bean的三种方式：<br>   第一种方式：使用默认无参构造函数  <!--在默认情况下：   它会根据默认无参构造函数来创建类对象。如果 bean 中没有默认无参构造函数，将会创建失败。 --> </p>
-<p>   第二种方式：spring管理静态工厂-使用静态工厂的方法创建对象  <!-- 此种方式是:   使用 StaticFactory 类中的静态方法 createAccountService 创建对象，并存入 spring 容器  
-   id 属性：指定 bean 的 id，用于从容器中获取  
-   class 属性：指定静态工厂的全限定类名  
-   factory-method 属性：指定生产对象的静态方法  --> </p>
-<p>   第三种方式：spring管理实例工厂-使用实例工厂的方法创建对象。<br>   /<em>** 模拟一个实例工厂，创建业务层实现类  </em> 此工厂创建对象，必须现有工厂实例对象，再调用方法  */<br>   &lt; !– 此种方式是：    先把工厂的创建交给 spring 来管理。   然后在使用工厂的 bean 来调用里面的方法   factory-bean 属性：用于指定实例工厂 bean 的 id。   factory-method 属性：用于指定实例工厂中创建对象的方法。  –&gt; </p>
-<h3 id="spring-的依赖注入"><a href="#spring-的依赖注入" class="headerlink" title="spring 的依赖注入"></a>spring 的依赖注入</h3><p>  依赖注入：Dependency Injection。它是 spring 框架核心 ioc 的具体实现。 我们的程序在编写时，通过控制反转，把对象的创建交给了 spring，但是代码中不可能出现没有依赖的情况。 ioc 解耦只是降低他们的依赖关系，但不会消除。例如：我们的业务层仍会调用持久层的方法。 那这种业务层和持久层的依赖关系，在使用 spring 之后，就让 spring 来维护了。 简单的说，就是坐等框架把持久层对象传入业务层，而不用我们自己去获取。 </p>
-<p>  1.使用构造函数的方式，给 service 中的属性传值。<br>   要求：   类中需要提供一个对应参数列表的构造函数。<br>   涉及的标签：   constructor-arg<br>   属性：<br>      index:指定参数在构造函数参数列表的索引位置<br>      type:指定参数在构造函数中的数据类型<br>      name:指定参数在构造函数中的名称     用这个找给谁赋值<br>    =======上面三个都是找给谁赋值，下面两个指的是赋什么值的==============<br>      value:它能赋的值是基本数据类型和 String 类型     ref:它能赋的值是其他 bean 类型，也就是说，必须得是在配置文件中配置过的 bean  。</p>
-<ol start="2">
-<li>通过配置文件给 bean 中的属性传值：使用 set 方法的方式<br>属性：<br> name：找的是类中 set 方法后面的部分<br> ref：给属性赋值是其他 bean 类型的<br> value：给属性赋值是基本数据类型和 string 类型的<br>  (实际开发中，此种方式用的较多)。 </li>
-</ol>
-<h1 id="spring整合junit分析"><a href="#spring整合junit分析" class="headerlink" title="spring整合junit分析"></a>spring整合junit分析</h1><p>  1、应用程序的入口<br>  main方法<br>  2、junit单元测试中，没有main方法也能执行<br>  junit集成了一个main方法<br>  该方法就会判断当前测试类中哪些方法有 @Test注解<br>  junit就让有Test注解的方法执行<br>  3、junit不会管我们是否采用spring框架<br>  在执行测试方法时，junit根本不知道我们是不是使用了spring框架<br>  所以也就不会为我们读取配置文件/配置类创建spring核心容器<br>  4、由以上三点可知<br>  当测试方法执行时，没有Ioc容器，就算写了Autowired注解，也无法实现注入</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2260,7 +2257,7 @@ mybatis基于注解的入门案例：
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

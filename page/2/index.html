@@ -250,6 +250,156 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/09/21/Arya13/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiao zhongying">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images\01.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Arya">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/21/Arya13/" itemprop="url">Arya13（SSM框架的第一步--Spring的学习）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-21T15:35:44+08:00">
+                2019-09-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Spring是什么"><a href="#Spring是什么" class="headerlink" title="Spring是什么"></a>Spring是什么</h1><p>  Spring是分层的 Java SE/EE应用 full-stack 轻量级开源框架，以 IoC（Inverse Of Control： 反转控制）和 AOP（Aspect Oriented Programming：面向切面编程）为内核，提供了展现层 Spring MVC 和持久层 Spring JDBC 以及业务层事务管理等众多的企业级应用技术，还能整合开源世界众多 著名的第三方框架和类库，逐渐成为使用最多的Java EE 企业应用开源框架。 </p>
+<h2 id="Spring的发展历程及优势"><a href="#Spring的发展历程及优势" class="headerlink" title="Spring的发展历程及优势"></a>Spring的发展历程及优势</h2><p>   1997 年 IBM提出了EJB 的思想<br>   1998 年，SUN制定开发标准规范 EJB1.0<br>   1999 年，EJB1.1 发布<br>   2001 年，EJB2.0 发布<br>   2003 年，EJB2.1 发布<br>   2006 年，EJB3.0 发布   Rod Johnson（spring之父）<br>              Expert One-to-One J2EE Design and Development(2002)    阐述了 J2EE 使用EJB 开发设计的优点及解决方案    Expert One-to-One J2EE Development without EJB(2004)    阐述了 J2EE 开发不使用 EJB的解决方式（Spring 雏形）<br>   2017 年 9 月份发布了 spring 的最新版本 spring 5.0 通用版（GA） </p>
+<p>   优势：<br>   方便解耦，简化开发。 通过 Spring提供的 IoC容器，可以将对象间的依赖关系交由 Spring进行控制，避免硬编码所造 成的过度程序耦合。用户也不必再为单例模式类、属性文件解析等这些很底层的需求编写代码，可 以更专注于上层的应用。 </p>
+<p>   AOP编程的支持  通过 Spring的 AOP 功能，方便进行面向切面的编程，许多不容易用传统OOP 实现的功能可以通过 AOP 轻松应付。</p>
+<p>   声明式事务的支持  可以将我们从单调烦闷的事务管理代码中解脱出来，通过声明式方式灵活的进行事务的管理， 提高开发效率和质量。 </p>
+<p>   方便程序的测试  可以用非容器依赖的编程方式进行几乎所有的测试工作，测试不再是昂贵的操作，而是随手可 做的事情。</p>
+<p>   方便集成各种优秀框架  Spring可以降低各种框架的使用难度，提供了对各种优秀框架（Struts、Hibernate、Hessian、Quartz 等）的直接支持。 降低 JavaEE API的使用难度  Spring对 JavaEE API（如 JDBC、JavaMail、远程调用等）进行了薄薄的封装层，使这些 API 的 使用难度大为降低。 </p>
+<p>   Java源码是经典学习范例  Spring的源代码设计精妙、结构清晰、匠心独用，处处体现着大师对Java 设计模式灵活运用以 及对 Java技术的高深造诣。它的源代码无意是 Java 技术的最佳实践的范例。 </p>
+<h2 id="IOC的概念"><a href="#IOC的概念" class="headerlink" title="IOC的概念"></a>IOC的概念</h2><p>   控制反转（Inversion of control）把创建对象的权利交给框架，是框架的重要特征。它包括依赖注入和依赖查找。</p>
+<h3 id="程序的耦合"><a href="#程序的耦合" class="headerlink" title="程序的耦合"></a>程序的耦合</h3><p>   耦合性(Coupling)，也叫耦合度，是对模块间关联程度的度量。耦合的强弱取决于模块间接口的复杂性、调 用模块的方式以及通过界面传送数据的多少。模块间的耦合度是指模块之间的依赖关系，包括控制关系、调用关系、数据传递关系。模块间联系越多，其耦合性越强，同时表明其独立性越差( 降低耦合性，可以提高其独立 性)。耦合性存在于各个领域，而非软件设计中独有的，但是我们只讨论软件工程中的耦合。 在软件工程中，耦合指的就是就是对象之间的依赖性。对象之间的耦合越高，维护成本越高。因此对象的设计应使类和构件之间的耦合最小。软件设计中通常用耦合度和内聚度作为衡量模块独立程度的标准。划分模块的一个 准则就是高内聚低耦合。</p>
+<h3 id="工厂模式解耦"><a href="#工厂模式解耦" class="headerlink" title="工厂模式解耦"></a>工厂模式解耦</h3><p>   在实际开发中我们可以把三层的对象都使用配置文件配置起来，当启动服务器应用加载的时候，让一个类中的方法通过读取配置文件，把这些对象创建出来并存起来。在接下来的使用的时候，直接拿过来用就好了。 那么，这个读取配置文件，创建和获取三层对象的类就是工厂。 </p>
+<h3 id="IOC中的标签"><a href="#IOC中的标签" class="headerlink" title="IOC中的标签"></a>IOC中的标签</h3><p>   一、bean标签<br>   作用：  用于配置对象让 spring 来创建的。  默认情况下它调用的是类中的无参构造函数。如果没有无参构造函数则不能创建成功。 属性：<br>   id：给对象在容器中提供一个唯一标识。用于获取对象。  class：指定类的全限定类名。用于反射创建对象。默认情况下调用无参构造函数。<br>   scope：指定对象的作用范围。   </p>
+<pre><code>* singleton :默认值，单例的.   
+* prototype :多例的.  
+* request :WEB 项目中,Spring 创建一个 Bean 的对象,将对象存入到 request 域中. 
+* session :WEB 项目中,Spring 创建一个 Bean 的对象,将对象存入到 session 域中.  
+* global session :WEB 项目中,应用在 Portlet 环境.如果没有 Portlet 环境那么 globalSession 相当于 session. 
+</code></pre><p>   init-method：指定类中的初始化方法名称。<br>   destroy-method：指定类中销毁方法名称。 </p>
+<p>   bean 的作用范围和生命周期 ：<br>   单例对象：scope=”singleton”   一个应用只有一个对象的实例。它的作用范围就是整个引用。<br>   生命周期：    对象出生：当应用加载，创建容器时，对象就被创建了。<br>   对象活着：只要容器在，对象一直活着。<br>   对象死亡：当应用卸载，销毁容器时，对象就被销毁了。<br>   多例对象：scope=”prototype”   每次访问对象时，都会重新创建对象实例。<br>   生命周期：<br>     对象出生：当使用对象时，创建新的对象实例。<br>     对象活着：只要对象在使用中，就一直活着。<br>     对象死亡：当对象长时间不用时，被 java 的垃圾回收器回收了。 </p>
+<p>   实例化Bean的三种方式：<br>   第一种方式：使用默认无参构造函数  <!--在默认情况下：   它会根据默认无参构造函数来创建类对象。如果 bean 中没有默认无参构造函数，将会创建失败。 --> </p>
+<p>   第二种方式：spring管理静态工厂-使用静态工厂的方法创建对象  <!-- 此种方式是:   使用 StaticFactory 类中的静态方法 createAccountService 创建对象，并存入 spring 容器  
+   id 属性：指定 bean 的 id，用于从容器中获取  
+   class 属性：指定静态工厂的全限定类名  
+   factory-method 属性：指定生产对象的静态方法  --> </p>
+<p>   第三种方式：spring管理实例工厂-使用实例工厂的方法创建对象。<br>   /<em>** 模拟一个实例工厂，创建业务层实现类  </em> 此工厂创建对象，必须现有工厂实例对象，再调用方法  */<br>   &lt; !– 此种方式是：    先把工厂的创建交给 spring 来管理。   然后在使用工厂的 bean 来调用里面的方法   factory-bean 属性：用于指定实例工厂 bean 的 id。   factory-method 属性：用于指定实例工厂中创建对象的方法。  –&gt; </p>
+<h3 id="spring-的依赖注入"><a href="#spring-的依赖注入" class="headerlink" title="spring 的依赖注入"></a>spring 的依赖注入</h3><p>  依赖注入：Dependency Injection。它是 spring 框架核心 ioc 的具体实现。 我们的程序在编写时，通过控制反转，把对象的创建交给了 spring，但是代码中不可能出现没有依赖的情况。 ioc 解耦只是降低他们的依赖关系，但不会消除。例如：我们的业务层仍会调用持久层的方法。 那这种业务层和持久层的依赖关系，在使用 spring 之后，就让 spring 来维护了。 简单的说，就是坐等框架把持久层对象传入业务层，而不用我们自己去获取。 </p>
+<p>  1.使用构造函数的方式，给 service 中的属性传值。<br>   要求：   类中需要提供一个对应参数列表的构造函数。<br>   涉及的标签：   constructor-arg<br>   属性：<br>      index:指定参数在构造函数参数列表的索引位置<br>      type:指定参数在构造函数中的数据类型<br>      name:指定参数在构造函数中的名称     用这个找给谁赋值<br>    =======上面三个都是找给谁赋值，下面两个指的是赋什么值的==============<br>      value:它能赋的值是基本数据类型和 String 类型     ref:它能赋的值是其他 bean 类型，也就是说，必须得是在配置文件中配置过的 bean  。</p>
+<ol start="2">
+<li>通过配置文件给 bean 中的属性传值：使用 set 方法的方式<br>属性：<br> name：找的是类中 set 方法后面的部分<br> ref：给属性赋值是其他 bean 类型的<br> value：给属性赋值是基本数据类型和 string 类型的<br>  (实际开发中，此种方式用的较多)。 </li>
+</ol>
+<h1 id="spring整合junit分析"><a href="#spring整合junit分析" class="headerlink" title="spring整合junit分析"></a>spring整合junit分析</h1><p>  1、应用程序的入口<br>  main方法<br>  2、junit单元测试中，没有main方法也能执行<br>  junit集成了一个main方法<br>  该方法就会判断当前测试类中哪些方法有 @Test注解<br>  junit就让有Test注解的方法执行<br>  3、junit不会管我们是否采用spring框架<br>  在执行测试方法时，junit根本不知道我们是不是使用了spring框架<br>  所以也就不会为我们读取配置文件/配置类创建spring核心容器<br>  4、由以上三点可知<br>  当测试方法执行时，没有Ioc容器，就算写了Autowired注解，也无法实现注入</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/09/05/Arya12/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1428,134 +1578,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/05/06/Arya03/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xiao zhongying">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images\01.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Arya">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/05/06/Arya03/" itemprop="url">Arya03（Tomcat运行失败的问题）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-06T15:23:38+08:00">
-                2019-05-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="这是eclipse中Tomcat崩溃时的解法"><a href="#这是eclipse中Tomcat崩溃时的解法" class="headerlink" title="这是eclipse中Tomcat崩溃时的解法"></a>这是eclipse中Tomcat崩溃时的解法</h1><h2 id="问题：项目无法启动报错Removing-obsolete-files-from-server…-Could-not-clean-server-。。。。"><a href="#问题：项目无法启动报错Removing-obsolete-files-from-server…-Could-not-clean-server-。。。。" class="headerlink" title="问题：项目无法启动报错Removing obsolete files from server… Could not clean server 。。。。"></a>问题：项目无法启动报错Removing obsolete files from server… Could not clean server 。。。。</h2><h3 id="用了百度上的各种方法都没用"><a href="#用了百度上的各种方法都没用" class="headerlink" title="用了百度上的各种方法都没用"></a>用了百度上的各种方法都没用</h3><ul>
-<li>首先尝试了把Tomcat删除后再重新建立，然而没用</li>
-<li>第二个方法是保证eclipse中tomcat的server.xml与Tomcat根目录下conf/server.xml保持一直，然后删除eclipse的Workspace工作目录下的.metadata.pl  ugins\org.eclipse.wst.server.core中temp0文件夹中所有文件，然而对我的项目依旧没用，这时候以及很崩溃了。。。。。</li>
-<li><p>最后我又看到网上是说eclipse的版本和Tomcat版本不匹配？？但是之前为毛可以运行我很怀疑？于是我把Tomcat原来的7.0版本换成了6.0，总算是有点用了。亲测最好用的方法还是把EClipse那个大头文件删了重新装最好办哈哈哈。</p>
-</li>
-<li><p>Tomcat编译时报错<br>严重: A child container failed during start<br>java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/lab]]<br> at java.util.concurrent.FutureTask.report(Unknown Source)<br> at java.util.concurrent.FutureTask.get(Unknown Source)<br> at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:1123)<br> at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:816)<br> at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)<br> at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)<br> at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)<br> at java.util.concurrent.FutureTask.run(Unknown Source)<br> at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)<br> at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)<br> at java.lang.Thread.run(Unknown Source)<br>Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/lab]]<br> at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:154)<br> … 6 more<br>Caused by: java.lang.NoClassDefFoundError: org/springframework/web/context/WebApplicationContext<br> at java.lang.Class.getDeclaredFields0(Native Method)<br> at java.lang.Class.privateGetDeclaredFields(Unknown Source)<br> at java.lang.Class.getDeclaredFields(Unknown Source)<br> at org.apache.catalina.util.Introspection.getDeclaredFields(Introspection.java:106)<br> at org.apache.catalina.startup.WebAnnotationSet.loadFieldsAnnotation(WebAnnotationSet.java:270)<br> at org.apache.catalina.startup.WebAnnotationSet.loadApplicationServletAnnotations(WebAnnotationSet.java:139)<br> at org.apache.catalina.startup.WebAnnotationSet.loadApplicationAnnotations(WebAnnotationSet.java:65)<br> at org.apache.catalina.startup.ContextConfig.applicationAnnotationsConfig(ContextConfig.java:415)<br> at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:892)<br> at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:386)<br> at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)<br> at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)<br> at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5380)<br> at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)<br> … 6 more<br>Caused by: java.lang.ClassNotFoundException:<br>org.springframework.web.context.WebApplicationContext<br> at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1720)<br> at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1571)<br> … 20 more</p>
-<p>可以试试clean一下项目再重新发布，如果没用就去看看配置文件，配置文件肯定有错误了。</p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1608,7 +1630,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
