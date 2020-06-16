@@ -250,6 +250,145 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Arya.com/2020/06/15/Arya25/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiao zhongying">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images\01.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Arya">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/06/15/Arya25/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-15T18:05:13+08:00">
+                2020-06-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<p>title: Arya25(学习Ajax)<br>date: 2020-06-15 18:05:13</p>
+<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><h1 id="学习原因"><a href="#学习原因" class="headerlink" title="学习原因"></a>学习原因</h1><p>   当然是Ajax太方便了，但是由于我觉得很难，所以也怕，也就是我今天才学的原因。之前用SSM写小Demo很想用ajax的，奈何当时理解起来有点困难，后面下决心一定要学一下，也就是今天。</p>
+<h1 id="SSM框架课程扩展之Ajax学习"><a href="#SSM框架课程扩展之Ajax学习" class="headerlink" title="SSM框架课程扩展之Ajax学习"></a>SSM框架课程扩展之Ajax学习</h1><p>  AJAX不是一种新的编程语言，而是一种用于创建更好更快以及交互性更强的web应用程序的技术。<br>  使用ajax要先导入jquery的包，而后编写对应处理的controller，返回消息或者字符串或者json格式的数据；接着编写ajax请求：url:controller请求，data：键值对,success：回调函数；最后给ajax绑定事件，点击click或者失去焦点onblur等等。</p>
+<h2 id="案例代码1"><a href="#案例代码1" class="headerlink" title="案例代码1"></a>案例代码1</h2><p>  我觉得学的时候看的案例很简单明了，需要用的时候模仿着写再改改就行：<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Controller层 </span><br><span class="line">查询总用户数</span><br><span class="line">    @RequestMapping(value = &quot;/findTotalUsers.do&quot;,method = RequestMethod.GET)</span><br><span class="line">    public @ResponseBody Long findTotalUsers()&#123;</span><br><span class="line">        ModelAndView modelAndView = new ModelAndView();</span><br><span class="line">        Long sum = personService.findTotalUsers();</span><br><span class="line">        System.out.println(sum+&quot;....................................&quot;);</span><br><span class="line">        modelAndView.addObject(&quot;sum&quot;,sum);</span><br><span class="line">        return sum;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Service层</span><br><span class="line">public Long findTotalUsers() &#123;</span><br><span class="line">        return personDao.findTotalUsers();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<pre><code>Dao层
+public Long findTotalUsers() {
+        String hql = &quot;select count(*) from Person&quot;;
+        return (Long) this.getSessionFactory().getCurrentSession().createQuery(hql).uniqueResult();
+    }
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">``` </span><br><span class="line">	ajax代码</span><br><span class="line">	&lt;script src=&quot;../js/jquery-1.8.3.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</span><br><span class="line">	    &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">	        $(document).ready(</span><br><span class="line">	                function ajaxRePost(url,params)&#123;</span><br><span class="line">	                    var message = &quot;&quot;;</span><br><span class="line">	                    var options=&#123;</span><br><span class="line">	                        type:&quot;GET&quot;,//请求方式</span><br><span class="line">	                        url:&quot;$&#123;pageContext.request.contextPath&#125;/person/findTotalUsers.do&quot;,//后台请求路径</span><br><span class="line">	                        data:&#123;&#125;,</span><br><span class="line">	                        async:false,//是否异步请求</span><br><span class="line">	                        success:function (msg) &#123;//如果请求成功，返回数据。</span><br><span class="line">	                            message=msg;</span><br><span class="line">	                        &#125;</span><br><span class="line">	                    &#125;;</span><br><span class="line">	                    $.ajax(options);</span><br><span class="line">	                    alert(message);</span><br><span class="line">	//                    debugger;</span><br><span class="line">	                    $(&quot;#count&quot;).text(message);</span><br><span class="line">	                    return message;</span><br><span class="line">	                &#125;</span><br><span class="line">	        )</span><br><span class="line">	 </span><br><span class="line">	    &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="案例代码2"><a href="#案例代码2" class="headerlink" title="案例代码2"></a>案例代码2</h2><p>   jsp:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;table class=&quot;table table-bordered table-hover table-striped&quot; id=&quot;tableuserlist&quot;&gt;</span><br><span class="line">                                  &lt;thead&gt;</span><br><span class="line">                                      &lt;tr&gt;</span><br><span class="line">                                          &lt;th&gt;ID&lt;/th&gt;</span><br><span class="line">                                          &lt;th&gt;Name&lt;/th&gt;</span><br><span class="line">                                          &lt;th&gt;Fullname&lt;/th&gt;</span><br><span class="line">                                          &lt;th&gt;Dept&lt;/th&gt;</span><br><span class="line">                                          &lt;th&gt;Job&lt;/th&gt;</span><br><span class="line">                                      &lt;/tr&gt;</span><br><span class="line">                                  &lt;/thead&gt;</span><br><span class="line">                                  &lt;tbody&gt;</span><br><span class="line">                                                                               </span><br><span class="line">                            &lt;/tbody&gt;</span><br><span class="line">                              &lt;/table&gt;</span><br></pre></td></tr></table></figure></p>
+<p>   js:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">	   &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">		$(function ()&#123;		</span><br><span class="line">			$.ajax(&#123;</span><br><span class="line">				type:&quot;GET&quot;,		</span><br><span class="line">				url:&quot;/usercontroller/getuserlist&quot;,			</span><br><span class="line">				dataType:&quot;json&quot;,</span><br><span class="line">				async:false,//是否异步请求</span><br><span class="line">				success:function(data)&#123;			</span><br><span class="line">&lt;!-- //------------遍历对象 .each的使用------------- </span><br><span class="line">     //前提必须是对象，一般情况下，后台传过来json字符串，要使用相应的方法将其转化为对象（eval、str.parseJSON()、JSON.parse(str)）。</span><br><span class="line"> --&gt;</span><br><span class="line">			var obj=eval(data);//将括号内的表达式（expression）转化为对象</span><br><span class="line">			var tbody=$(&apos;&lt;tbody&gt;&lt;/tbody&gt;&apos;);</span><br><span class="line">					   //下面使用each进行遍历 </span><br><span class="line">			$(obj).each(function (index)&#123;</span><br><span class="line">			var val=obj[index];</span><br><span class="line">			var tr=$(&apos;&lt;tr&gt;&lt;/tr&gt;&apos;);</span><br><span class="line">			tr.append(&apos;&lt;td&gt;&apos;+ val.userid + &apos;&lt;/td&gt;&apos; + &apos;&lt;td&gt;&apos;+ val.username + &apos;&lt;/td&gt;&apos; +&apos;&lt;td&gt;&apos;+ val.userfullname + &apos;&lt;/td&gt;&apos; + &apos;&lt;td&gt;&apos;+ val.userdeptid + &apos;&lt;/td&gt;&apos;+&apos;&lt;td&gt;&apos;+ val.userjobid + &apos;&lt;/td&gt;&apos;);</span><br><span class="line">			tbody.append(tr);// append() :在被选元素的结尾插入内容</span><br><span class="line">				&#125;);</span><br><span class="line">			$(&apos;#tableuserlist tbody&apos;).replaceWith(tbody);</span><br><span class="line">				&#125;	</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125;);</span><br><span class="line">	&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<pre><code>controller: 
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">   	@RequestMapping(value=&quot;/getuserlist&quot;,method=RequestMethod.GET)</span><br><span class="line">public @ResponseBody List&lt;ErpUser&gt; GetUserList ()&#123;</span><br><span class="line">	List&lt;ErpUser&gt; erpuserlist;</span><br><span class="line">	System.out.println(&quot;get userlist&quot;);</span><br><span class="line">	erpuserlist=userService.GetUserList();</span><br><span class="line">	return erpuserlist;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>service:
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">  	public List&lt;ErpUser&gt; GetUserList()&#123;</span><br><span class="line">	return erpUserMapper.selectAllUser();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>   mapper:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> List&lt;ErpUser&gt; selectAllUser();</span><br><span class="line">mapper.xml:</span><br><span class="line">  &lt;select id=&quot;selectAllUser&quot; resultMap=&quot;BaseResultMap&quot; &gt;</span><br><span class="line">   select</span><br><span class="line">   &lt;include refid=&quot;Base_Column_List&quot; /&gt;</span><br><span class="line">   from erp_user    </span><br><span class="line"> &lt;/select&gt;</span><br></pre></td></tr></table></figure></p>
+<pre><code>至此，完成了ajax 发送url请求，controller拦截后调用service mapper 至mysql查询数据，然后返回json格式数据交由ajax进行页面呈现。
+</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://Arya.com/2020/05/27/Arya24/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2008,201 +2147,6 @@ data-toggle=&quot;modal&quot;，HTML5 自定义的 data 属性 data-toggle 用�
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://Arya.com/2019/10/20/Arya15/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xiao zhongying">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images\01.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Arya">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/20/Arya15/" itemprop="url">Arya15（SSM框架的第三步--Mybatis的学习）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-20T17:44:59+08:00">
-                2019-10-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="框架概述"><a href="#框架概述" class="headerlink" title="框架概述"></a>框架概述</h1><h2 id="什么是框架"><a href="#什么是框架" class="headerlink" title="什么是框架"></a>什么是框架</h2><h3 id="什么是框架-1"><a href="#什么是框架-1" class="headerlink" title="什么是框架"></a>什么是框架</h3><p>  框架（Framework）是整个或部分系统的可重用设计，表现为一组抽象构件及构件实例间交互的方法;另一种 定义认为，框架是可被应用开发者定制的应用骨架。前者是从应用方面而后者是从目的方面给出的定义。  简而言之，框架其实就是某种应用的半成品，就是一组组件，供你选用完成你自己的系统。简单说就是使用别 人搭好的舞台，你来做表演。而且，框架一般是成熟的，不断升级的软件。  </p>
-<h3 id="框架要解决的问题"><a href="#框架要解决的问题" class="headerlink" title="框架要解决的问题"></a>框架要解决的问题</h3><p>  框架要解决的最重要的一个问题是技术整合的问题，在 J2EE 的 框架中，有着各种各样的技术，不同的 软件企业需要从 J2EE 中选择不同的技术，这就使得软件企业最终的应用依赖于这些技术，技术自身的复杂性和技 术的风险性将会直接对应用造成冲击。而应用是软件企业的核心，是竞争力的关键所在，因此应该将应用自身的设计和具体的实现技术解耦。这样，软件企业的研发将集中在应用的设计上，而不是具体的技术实现，技术实现是应 用的底层支撑，它不应该直接对应用产生影响。 </p>
-<p>  框架一般处在低层应用平台（如 J2EE）和高层业务逻辑之间的中间层。 </p>
-<h3 id="软件开发的分层重要性"><a href="#软件开发的分层重要性" class="headerlink" title="软件开发的分层重要性"></a>软件开发的分层重要性</h3><p>   框架的重要性在于它实现了部分功能，并且能够很好的将低层应用平台和高层业务逻辑进行了缓和。为了实现<br>   软件工程中的“高内聚、低耦合”。把问题划分开来各个解决，易于控制，易于延展，易于分配资源。我们常见的 MVC 软件设计思想就是很好的分层思想。 </p>
-<h3 id="分层开发下的常见框架"><a href="#分层开发下的常见框架" class="headerlink" title="分层开发下的常见框架"></a>分层开发下的常见框架</h3><p>  常见的 JavaEE 开发框架：<br>   1、解决数据的持久化问题的框架：Mybatis:<br>   作为持久层的框架，还有一个封装程度更高的框架就是Hibernate，但这个框架因为各种原因目前在国内的 流行程度下降太多，现在公司开发也越来越少使用。目前使用 Spring Data 来实现数据持久化也是一种趋势。<br>   2、解决 WEB 层问题的 MVC 框架:SpringMVC<br>   3、解决技术整合问题的框架：Spring</p>
-<h3 id="MyBatis-框架概述"><a href="#MyBatis-框架概述" class="headerlink" title="MyBatis 框架概述"></a>MyBatis 框架概述</h3><p>   mybatis是一个优秀的基于 java 的持久层框架，它内部封装了 jdbc，使开发者只需要关注 sql语句本身， 而不需要花费精力去处理加载驱动、创建连接、创建 statement 等繁杂的过程。 mybatis通过xml 或注解的方式将要执行的各种statement配置起来，并通过java对象和statement 中 sql 的动态参数进行映射生成最终执行的 sql 语句，最后由 mybatis 框架执行 sql 并将结果映射为 java 对象并 返回。 采用 ORM 思想解决了实体和数据库映射的问题，对 jdbc进行了封装，屏蔽了 jdbc api 底层访问细节，使我 们不用与 jdbc api 打交道，就可以完成对数据库的持久化操作。 为了我们能够更好掌握框架运行的内部过程，并且有更好的体验，下面我们将从自定义 Mybatis 框架开始来 学习框架。此时我们将会体验框架从无到有的过程体验，也能够很好的综合前面阶段所学的基础。  </p>
-<h3 id="jdbc-问题分析"><a href="#jdbc-问题分析" class="headerlink" title="jdbc 问题分析"></a>jdbc 问题分析</h3><p>   1、数据库链接创建、释放频繁造成系统资源浪费从而影响系统性能，如果使用数据库链接池可解决此问题。<br>   2、Sql 语句在代码中硬编码，造成代码不易维护，实际应用 sql 变化的可能较大，sql 变动需要改变 java 代码。<br>   3、使用 preparedStatement 向占有位符号传参数存在硬编码，因为 sql 语句的 where 条件不一定，可能 多也可能少，修改 sql 还要修改代码，系统不易维护。<br>   4、对结果集解析存在硬编码（查询列名），sql 变化导致解析代码变化，系统不易维护，如果能将数据库记 录封装成 pojo对象解析比较方便。</p>
-<h1 id="day01"><a href="#day01" class="headerlink" title="day01"></a>day01</h1><p>  1、什么是框架？<br>  它是我们软件开发中的一套解决方案，不同的框架解决的是不同的问题。<br>  使用框架的好处：<br>    框架封装了很多的细节，使开发者可以使用极简的方式实现功能。大大提高开发效率。<br>  2、三层架构<br>   表现层：<br>     是用于展示数据的<br>  业务层：<br>    是处理业务需求<br>  持久层：<br>    是和数据库交互的<br>  3、持久层技术解决方案<br>   JDBC技术：<br>    Connection<br>    PreparedStatement<br>    ResultSet<br>   Spring的JdbcTemplate：<br>    Spring中对jdbc的简单封装<br>   Apache的DBUtils：<br>    它和Spring的JdbcTemplate很像，也是对Jdbc的简单封装</p>
-<p>  以上这些都不是框架<br>    JDBC是规范<br>    Spring的JdbcTemplate和Apache的DBUtils都只是工具类</p>
-<p>  4、mybatis的概述<br>  mybatis是一个持久层框架，用java编写的。<br>  它封装了jdbc操作的很多细节，使开发者只需要关注sql语句本身，而无需关注注册驱动，创建连接等繁杂过程<br>  它使用了ORM思想实现了结果集的封装。</p>
-<p>   ORM：<br>    Object Relational Mappging 对象关系映射<br>    简单的说：<br>      就是把数据库表和实体类及实体类的属性对应起来<br>      让我们可以操作实体类就实现操作数据库表。</p>
-<pre><code>user      User
-id      userId
-user_name   userName
-</code></pre><p>  今天我们需要做到<br>    实体类中的属性和数据库表的字段名称保持一致。<br>      user      User<br>      id      id<br>      user_name   user_name<br>  5、mybatis的入门<br>  mybatis的环境搭建<br>    第一步：创建maven工程并导入坐标<br>    第二步：创建实体类和dao的接口<br>    第三步：创建Mybatis的主配置文件<br>        SqlMapConifg.xml<br>    第四步：创建映射配置文件<br>        IUserDao.xml<br>  环境搭建的注意事项：<br>    第一个：创建IUserDao.xml 和 IUserDao.java时名称是为了和我们之前的知识保持一致。<br>      在Mybatis中它把持久层的操作接口名称和映射文件也叫做：Mapper<br>      所以：IUserDao 和 IUserMapper是一样的<br>    第二个：在idea中创建目录的时候，它和包是不一样的<br>      包在创建时：com.itheima.dao它是三级结构<br>      目录在创建时：com.itheima.dao是一级目录<br>    第三个：mybatis的映射配置文件位置必须和dao接口的包结构相同<br>    第四个：映射配置文件的mapper标签namespace属性的取值必须是dao接口的全限定类名<br>    第五个：映射配置文件的操作配置（select），id属性的取值必须是dao接口的方法名</p>
-<pre><code>当我们遵从了第三，四，五点之后，我们在开发中就无须再写dao的实现类。
-</code></pre><p>  mybatis的入门案例<br>    第一步：读取配置文件<br>    第二步：创建SqlSessionFactory工厂<br>    第三步：创建SqlSession<br>    第四步：创建Dao接口的代理对象<br>    第五步：执行dao中的方法<br>    第六步：释放资源</p>
-<pre><code>注意事项：
-  不要忘记在映射配置中告知mybatis要封装到哪个实体类中
-  配置的方式：指定实体类的全限定类名
-
-mybatis基于注解的入门案例：
-  把IUserDao.xml移除，在dao接口的方法上使用@Select注解，并且指定SQL语句
-  同时需要在SqlMapConfig.xml中的mapper配置时，使用class属性指定dao接口的全限定类名。
-</code></pre><p>  明确：<br>    我们在实际开发中，都是越简便越好，所以都是采用不写dao实现类的方式。<br>    不管使用XML还是注解配置。<br>    但是Mybatis它是支持写dao实现类的。</p>
-<p>  6、自定义Mybatis的分析：<br>  mybatis在使用代理dao的方式实现增删改查时做什么事呢？<br>    只有两件事：<br>      第一：创建代理对象<br>      第二：在代理对象中调用selectList</p>
-<p>  自定义mybatis能通过入门案例看到类<br>    class Resources<br>    class SqlSessionFactoryBuilder<br>    interface SqlSessionFactory<br>    interface SqlSession</p>
-<h1 id="day02"><a href="#day02" class="headerlink" title="day02"></a>day02</h1><p>  1、回顾mybatis自定义和环境搭建+完善自定义Mybatis的注解开发<br>  2、Mybatis基于代理Dao的CRUD操作         重点内容<br>  3、CRUD中可能遇到的问题：参数的传递以及返回值的封装<br>  4、介绍Mybatis基于传统dao方式的使用（自己编写dao的实现类）  了解的内容<br>  5、mybatis主配置文件中的常用配置<br>   properties标签<br>   typeAliases标签       —解释Integer的写法<br>   mappers标签的子标签：package</p>
-<hr>
-<p>   OGNL表达式：<br>     Object Graphic Navigation Language<br>    对象  图 导航     语言</p>
-<pre><code>它是通过对象的取值方法来获取数据。在写法上把get给省略了。
-比如：我们获取用户的名称
-  类中的写法：user.getUsername();
-  OGNL表达式写法：user.username
-</code></pre><p>  mybatis中为什么能直接写username,而不用user.呢：<br>    因为在parameterType中已经提供了属性所属的类，所以此时不需要写对象名</p>
-<h1 id="day03"><a href="#day03" class="headerlink" title="day03"></a>day03</h1><pre><code>1、mybatis中的连接池以及事务控制      原理部分了解，应用部分会用
-</code></pre><p>  mybatis中连接池使用及分析<br>  mybatis事务控制的分析<br>2、mybatis基于XML配置的动态SQL语句使用    会用即可<br>  mappers配置文件中的几个标签：<br>    &lt; if&gt;<br>    &lt; where&gt;<br>    &lt; foreach&gt;<br>    &lt; sql&gt;<br>3、mybatis中的多表操作       掌握应用<br>  一对多<br>  一对一（？）</p>
-<h2 id="多对多"><a href="#多对多" class="headerlink" title="  多对多"></a>  多对多</h2><p>1、连接池：<br>  我们在实际开发中都会使用连接池。<br>  因为它可以减少我们获取连接所消耗的时间。<br>2、mybatis中的连接池<br>  mybatis连接池提供了3种方式的配置：<br>    配置的位置：<br>      主配置文件SqlMapConfig.xml中的dataSource标签，type属性就是表示采用何种连接池方式。<br>    type属性的取值：<br>      POOLED   采用传统的javax.sql.DataSource规范中的连接池，mybatis中有针对规范的实现<br>      UNPOOLED 采用传统的获取连接的方式，虽然也实现Javax.sql.DataSource接口，但是并没有使用池的思想。<br>      JNDI   采用服务器提供的JNDI技术实现，来获取DataSource对象，不同的服务器所能拿到DataSource是不一样。<br>         注意：如果不是web或者maven的war工程，是不能使用的。<br>         我们课程中使用的是tomcat服务器，采用连接池就是dbcp连接池。<br>3、mybatis中的事务<br>  什么是事务<br>  事务的四大特性ACID<br>  不考虑隔离性会产生的3个问题<br>  解决办法：四种隔离级别</p>
-<p>  它是通过sqlsession对象的commit方法和rollback方法实现事务的提交和回滚<br>4、mybatis中的多表查询<br>  表之间的关系有几种：<br>    一对多<br>    多对一<br>    一对一<br>    多对多<br>  举例：<br>    用户和订单就是一对多<br>    订单和用户就是多对一<br>      一个用户可以下多个订单<br>      多个订单属于同一个用户</p>
-<pre><code>人和身份证号就是一对一
-  一个人只能有一个身份证号
-  一个身份证号只能属于一个人
-
-老师和学生之间就是多对多
-  一个学生可以被多个老师教过
-  一个老师可以交多个学生
-</code></pre><p>  特例：<br>    如果拿出每一个订单，他都只能属于一个用户。<br>    所以Mybatis就把多对一看成了一对一。</p>
-<p>  mybatis中的多表查询：<br>    示例：用户和账户<br>      一个用户可以有多个账户<br>      一个账户只能属于一个用户（多个账户也可以属于同一个用户）<br>    步骤：<br>      1、建立两张表：用户表，账户表<br>        让用户表和账户表之间具备一对多的关系：需要使用外键在账户表中添加<br>      2、建立两个实体类：用户实体类和账户实体类<br>        让用户和账户的实体类能体现出来一对多的关系<br>      3、建立两个配置文件<br>        用户的配置文件<br>        账户的配置文件<br>      4、实现配置：<br>        当我们查询用户时，可以同时得到用户下所包含的账户信息<br>        当我们查询账户时，可以同时得到账户的所属用户信息</p>
-<pre><code>示例：用户和角色
-  一个用户可以有多个角色
-  一个角色可以赋予多个用户
-步骤：
-  1、建立两张表：用户表，角色表
-    让用户表和角色表具有多对多的关系。需要使用中间表，中间表中包含各自的主键，在中间表中是外键。
-  2、建立两个实体类：用户实体类和角色实体类
-    让用户和角色的实体类能体现出来多对多的关系
-    各自包含对方一个集合引用
-  3、建立两个配置文件
-    用户的配置文件
-    角色的配置文件
-  4、实现配置：
-    当我们查询用户时，可以同时得到用户所包含的角色信息
-    当我们查询角色时，可以同时得到角色的所赋予的用户信息
-</code></pre><h1 id="day04"><a href="#day04" class="headerlink" title="day04"></a>day04</h1><p>   1、Mybatis中的延迟加载<br>  问题：在一对多中，当我们有一个用户，它有100个账户。<br>        在查询用户的时候，要不要把关联的账户查出来？<br>        在查询账户的时候，要不要把关联的用户查出来？</p>
-<pre><code>在查询用户时，用户下的账户信息应该是，什么时候使用，什么时候查询的。
-在查询账户时，账户的所属用户信息应该是随着账户查询时一起查询出来。
-</code></pre><p>  什么是延迟加载<br>    在真正使用数据时才发起查询，不用的时候不查询。按需加载（懒加载）<br>  什么是立即加载<br>    不管用不用，只要一调用方法，马上发起查询。</p>
-<p>  在对应的四种表关系中：一对多，多对一，一对一，多对多<br>    一对多，多对多：通常情况下我们都是采用延迟加载。<br>    多对一，一对一：通常情况下我们都是采用立即加载。</p>
-<p>2、Mybatis中的缓存<br>  什么是缓存<br>    存在于内存中的临时数据。<br>  为什么使用缓存<br>    减少和数据库的交互次数，提高执行效率。<br>  什么样的数据能使用缓存，什么样的数据不能使用<br>    适用于缓存：<br>      经常查询并且不经常改变的。<br>      数据的正确与否对最终结果影响不大的。<br>    不适用于缓存：<br>      经常改变的数据<br>      数据的正确与否对最终结果影响很大的。<br>      例如：商品的库存，银行的汇率，股市的牌价。<br>  Mybatis中的一级缓存和二级缓存<br>    一级缓存：<br>      它指的是Mybatis中SqlSession对象的缓存。<br>      当我们执行查询之后，查询的结果会同时存入到SqlSession为我们提供一块区域中。<br>      该区域的结构是一个Map。当我们再次查询同样的数据，mybatis会先去sqlsession中<br>      查询是否有，有的话直接拿出来用。<br>      当SqlSession对象消失时，mybatis的一级缓存也就消失了。</p>
-<pre><code>二级缓存:
-  它指的是Mybatis中SqlSessionFactory对象的缓存。由同一个SqlSessionFactory对象创建的SqlSession共享其缓存。
-  二级缓存的使用步骤：
-    第一步：让Mybatis框架支持二级缓存（在SqlMapConfig.xml中配置）
-    第二步：让当前的映射文件支持二级缓存（在IUserDao.xml中配置）
-    第三步：让当前的操作支持二级缓存（在select标签中配置）
-</code></pre><p>3、Mybatis中的注解开发<br>  环境搭建<br>  单表CRUD操作（代理Dao方式）<br>  多表查询操作<br>  缓存的配置</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2255,7 +2199,7 @@ mybatis基于注解的入门案例：
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
